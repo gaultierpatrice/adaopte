@@ -6,10 +6,10 @@ export default function Navbar() {
       <h1>
         Ada<span className="text-[--secondary-color]">opte</span>
       </h1>
-      <a>Acceuil</a>
+      <a>Accueil</a>
       <a>J'adopte</a>
       <a>Guide de l'adoption</a>
-      <h2>devenir bénévole</h2>
+      <a>Devenir bénévole</a>
       <Button>Faire un don</Button>
     </header>
   );

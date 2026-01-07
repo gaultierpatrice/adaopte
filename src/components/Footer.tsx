@@ -1,3 +1,8 @@
+import { LuFacebook } from "react-icons/lu";
+import { FaInstagram } from "react-icons/fa";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { LuTwitch } from "react-icons/lu";
+
 export default function Footer() {
   return (
     <>
@@ -9,7 +14,20 @@ export default function Footer() {
               Notre mission est de trouver des foyers aimants pour chaque animal
               abandonné et de promouvoir le bien-être animal.
             </p>
-            <div>Facebook Insta Linkedin Discord</div>
+            <div className="flex flex-row justify-evenly">
+              <a>
+                <LuFacebook />
+              </a>
+              <a>
+                <FaInstagram />
+              </a>
+              <a>
+                <SlSocialLinkedin />
+              </a>
+              <a>
+                <LuTwitch />
+              </a>
+            </div>
           </section>
 
           <section className="flex-1">
