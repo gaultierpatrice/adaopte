@@ -12,14 +12,14 @@ import {
 function NavBar() {
   return (
     <header className="flex flex-row justify-between p-5">
-      <h1 className="flex items-center font-bold gap-2">
+      <h2 className="flex items-center font-bold gap-2">
         <span>
           <LuPawPrint />
         </span>
-        <span>
+        <span className="text-2xl">
           Ada<span className="text-(--secondary-color)">opte</span>
         </span>
-      </h1>
+      </h2>
       <NavLink to="/" className="flex items-center gap-2">
         <CiHome />
         <span>Acceuil</span>

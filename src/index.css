@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
 :root {
   --primary-color: #fffaf7;
   --secondary-color: #ff6d38;
@@ -24,4 +26,9 @@
 
   --section-margin: 2rem 0;
   --container-width: 90%;
+}
+
+h1,
+.heading {
+  font-family: var(--font-family-heading);
 }
