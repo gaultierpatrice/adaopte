@@ -11,7 +11,7 @@ function NavBar() {
       <NavLink to="/">Acceuil</NavLink>
       <NavLink to="/listing">J'adopte</NavLink>
       <a>Guide de l'adoption</a>
-      <h2>devenir bénévole</h2>
+      <a>Devenir bénévole</a>
       <Button>Faire un don</Button>
     </header>
   );
