@@ -1,7 +1,6 @@
 // import type { ButtonProps } from "../types/types";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
 }
