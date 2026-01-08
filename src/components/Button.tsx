@@ -7,20 +7,21 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 type ButtonVariant = "primary" | "secondary" | "accent";
 
-type ButtonSize = "sm" | "md" | "lg";
+type ButtonSize = "sm" | "md" | "lg" | "xl";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "bg-[var(--btn-primary-bg)] text-[var(--primary-color)] hover:bg-[var(--btn-primary-hover-bg)]",
   secondary:
-    "bg-[var(--btn-secondary-bg)] text-[var(--secondary-color)] hover:bg-[var(--btn-secondary-hover-bg)]",
-  accent: "bg-[var(--btn-accent-bg)] text-[var(--accent-color)]",
+    "bg-[var(--btn-secondary-bg)] text-[var(--primary-color)] hover:bg-[var(--btn-secondary-hover-bg)]",
+  accent: "bg-[var(--btn-accent-bg)] text-[var(--primary-color)]",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
-  sm: "px-3 py-1.5 text-sm",
-  md: "px-4 py-2 text-base",
-  lg: "px-5 py-3 text-lg",
+  sm: "px-3 py-1.5 text-sm shadow-[var(--shadow-sm)]",
+  md: "px-4 py-2 text-base shadow-[var(--shadow-md)]",
+  lg: "px-5 py-3 text-lg shadow-[var(--shadow-lg)]",
+  xl: "px-6 py-4 text-xl shadow-[var(--shadow-xl)]",
 };
 
 export default function Button({
