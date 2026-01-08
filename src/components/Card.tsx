@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 interface CardProps {
   name?: string;
   age?: string;
@@ -22,10 +24,7 @@ function Card({
   imageAlt,
 }: CardProps) {
   return (
-    <div
-      className="card
- w-full max-w-xs bg-white shadow-md"
-    >
+    <div className="flex flex-col justify-around card w-full max-w-xs bg-white shadow-md">
       {imageUrl && (
         <img
           src={imageUrl}
@@ -46,12 +45,6 @@ function Card({
           {age} &bull; {breed}
         </p>
       )}
-
-      {description && (
-        <p className="mt-4 text-sm text-gray-600 leading-relaxed px-5 ">
-          {description}
-        </p>
-      )}
       {city && (
         <p className="mt-2 text-sm font-semibold text-black px-5">{city}</p>
       )}
@@ -60,6 +53,15 @@ function Card({
           Code postal : {zipcode}
         </p>
       )}
+      {description && (
+        <p className="mt-4 text-sm text-gray-600 leading-relaxed px-5 ">
+          {description}
+        </p>
+      )}
+
+      <Button size="sm" className="w-fit mt-5 ml-5 mb-5">
+        Rencontrer
+      </Button>
     </div>
   );
 }
