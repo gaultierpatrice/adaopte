@@ -10,6 +10,7 @@ interface CardProps {
   zipcode?: string;
   description?: string;
   descriptionInfo?: string;
+  imageUrlIcons?: string;
   imageUrl?: string;
   imageAlt?: string;
   imageSize?: "small" | "large";
@@ -28,16 +29,17 @@ function Card({
   imageAlt,
   title,
   descriptionInfo,
+  imageUrlIcons,
   imageSize = "large",
   showButton = true,
 }: CardProps) {
   const imageSizeClass =
     imageSize === "small"
-      ? "w-full h-11 object-contain"
+      ? "w-full h-13 object-contain"
       : "w-full h-56 object-cover";
 
   return (
-    <div className="flex flex-col justify-around card w-full max-w-xs bg-white shadow-md">
+    <div className="flex flex-col justify-around card w-full max-w-xs bg-white shadow-md hoverflow-hidden rounded-lg border border-gray-200">
       {imageUrl && (
         <img
           src={imageUrl}
@@ -45,6 +47,15 @@ function Card({
           className={`w-full ${imageSizeClass} `}
         />
       )}
+      <div className="p-4 flex justify-center">
+        {imageUrlIcons && (
+          <img
+            src={imageUrlIcons}
+            alt={imageAlt ?? ""}
+            className={`w-full ${imageSizeClass} `}
+          />
+        )}
+      </div>
       {type && (
         <p className="text-sm font-semibold text-gray-500 px-5 pt-4">{type}</p>
       )}
@@ -67,7 +78,7 @@ function Card({
         </p>
       )}
       {title && (
-        <p className="flex justify-center pt-4 text-sm text-black px-5 font-bold">
+        <p className="flex justify-center text-center pt-4 text-xl text-black px-5 font-bold min-h-[72px] flex items-center justify-center">
           {title}
         </p>
       )}
@@ -77,7 +88,7 @@ function Card({
         </p>
       )}
       {descriptionInfo && (
-        <p className="flex justify-center text-justify py-4 text-sm text-gray-600 leading-relaxed px-5 ">
+        <p className="flex pb-10 justify-center text-center h-full text-sm text-gray-600 leading-relaxed px-5 ">
           {descriptionInfo}
         </p>
       )}
