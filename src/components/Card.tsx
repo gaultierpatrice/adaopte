@@ -10,6 +10,7 @@ interface CardProps {
   description?: string;
   imageUrl?: string;
   imageAlt?: string;
+  showButton?: boolean;
 }
 
 function Card({
@@ -22,6 +23,7 @@ function Card({
   description,
   imageUrl,
   imageAlt,
+  showButton = true,
 }: CardProps) {
   return (
     <div className="flex flex-col justify-around card w-full max-w-xs bg-white shadow-md">
@@ -58,10 +60,11 @@ function Card({
           {description}
         </p>
       )}
-
-      <Button size="sm" className="w-fit mt-5 ml-5 mb-5">
-        Rencontrer
-      </Button>
+      {showButton && (
+        <Button size="sm" className="w-fit mt-5 ml-5 mb-5">
+          Rencontrer
+        </Button>
+      )}
     </div>
   );
 }
