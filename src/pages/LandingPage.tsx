@@ -49,6 +49,7 @@ function LandingPage() {
                 <Card
                   key={index}
                   imageUrl={imageMap[animal.name] ?? animal.imageUrl}
+                  showButton={false}
                 />
               ))}
             </div>
