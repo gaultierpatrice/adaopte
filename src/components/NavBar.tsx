@@ -32,10 +32,10 @@ function NavBar() {
         <LuFish />
         <span>Guide de l'adoption</span>
       </a>
-      <a className="flex items-center gap-2">
-        <LuSquirrel />
+      <NavLink to="/devenir-benevole" className="flex items-center gap-2">
+        <LuBone />
         <span>Devenir bénévole</span>
-      </a>
+      </NavLink>
       <Button className="flex items-center gap-2">
         <span>Faire un don</span>
         <LuHandHeart />
