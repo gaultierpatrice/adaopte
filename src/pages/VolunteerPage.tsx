@@ -1,4 +1,18 @@
 import ImageWithText from "../components/ImageWithText";
+import volunteerData from "../data/volunteer.json";
+import Card from "../components/Card";
+
+import leafIcon from "../pictures/pousse.png";
+import brainIcon from "../pictures/gens.png";
+import peopleIcon from "../pictures/cerveau.png";
+import starIcon from "../pictures/etoile.png";
+
+const imageMap: Record<string, string> = {
+  "Agir concrètement pour le bien-être animal": leafIcon,
+  "Développer des compétences précieuses": brainIcon,
+  "Rejoindre une communauté engagée": peopleIcon,
+  "Donner du sens à votre temps libre": starIcon,
+};
 
 function VolunteerPage() {
   return (
@@ -14,8 +28,18 @@ function VolunteerPage() {
           formulaire de demande pour devenir bénévole
         </h2>
       </div>
-      <div className="flex flex-col justify-center items-center p-50 w-full bg-pink-100 ">
-        <h2 className="text-sm font-bold mb-5 underline">cartes</h2>
+      <div className="grid grid-cols-4 gap-6 p-8">
+        {volunteerData.map((volunteerData, index) => (
+          <Card
+            key={index}
+            {...volunteerData}
+            imageUrlIcons={
+              imageMap[volunteerData.title] ?? volunteerData.imageUrlIcons
+            }
+            imageSize="small"
+            showButton={false}
+          />
+        ))}
       </div>
       <div className="flex flex-col justify-center items-center p-50 w-full  bg-pink-200">
         <h2 className="text-sm font-bold mb-5 underline">

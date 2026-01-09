@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Agir concrètement pour le bien-être animal",
+    "descriptionInfo": "Chaque geste compte : un regard, une caresse, une balade… Vous contribuez à redonner confiance aux animaux abandonnés et à leur offrir une seconde chance.",
+    "imageUrlIcons": "src/pictures/pousse.png"
+  },
+  {
+    "title": "Développer des compétences précieuses",
+    "descriptionInfo": "Apprenez à mieux comprendre les comportements animaux,renforcez votre patience, votre sens de l’observation et votre capacité à prendre soin.",
+    "imageUrlIcons": "src/pictures/cerveau.png"
+  },
+  {
+    "title": "Rejoindre une communauté engagée",
+    "descriptionInfo": "Intégrez un réseau solidaire de passionné·es, participez à des actions collectives et partagez des moments forts autour d’une cause essentielle.",
+    "imageUrlIcons": "src/pictures/gens.png"
+  },
+  {
+    "title": "Donner du sens à votre temps libre",
+    "descriptionInfo": "En vous impliquant chez Adaopte, vous transformez votre temps en véritable acte d’amour, de respect et de solidarité envers les animaux.",
+    "imageUrlIcons": "src/pictures/etoile.png"
+  }
+]
