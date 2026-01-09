@@ -45,15 +45,26 @@ function LandingPage() {
               Découvrez en image tous nos animaux qui attendent une famille
               aimante. Chaque photo raconte une histoire et un espoir.
             </p>
-            <div className="grid grid-cols-4 gap-6 p-8">
-              {animals.map((animal, index) => (
-                <Card
-                  key={index}
-                  imageUrl={imageMap[animal.name] ?? animal.imageUrl}
-                  showButton={false}
-                />
-              ))}
+
+            <div className="grid grid-flow-col grid-rows-3 gap-4 max-h-[1200px] p-10">
+              {animals.map((animal, index) => {
+                // Define which items should span 2 rows
+                const rowSpanClass = [0, 3, 4, 7].includes(index)
+                  ? "row-span-2"
+                  : "";
+
+                return (
+                  <div key={animal.name} className={`${rowSpanClass} h-full`}>
+                    <Card
+                      imageSize="grid"
+                      imageUrl={imageMap[animal.name] ?? animal.imageUrl}
+                      showButton={false}
+                    />
+                  </div>
+                );
+              })}
             </div>
+
             <NavLink to="/listing" className="flex items-center gap-2">
               <Button className="mb-5">Voir tous les animaux</Button>
             </NavLink>

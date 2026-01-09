@@ -25,7 +25,7 @@ const imageMap: Record<string, string> = {
 function ListingPage() {
   return (
     <>
-      <main className="min-h-[650px] flex flex-col items-center justify-center bg-pink-300">
+      <main className="min-h-[650px] flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold underline">
           Liste d'animaux a adopter.
         </h1>
