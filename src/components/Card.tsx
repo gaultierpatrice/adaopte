@@ -13,6 +13,7 @@ interface CardProps {
   imageUrl?: string;
   imageAlt?: string;
   imageSize?: "small" | "large";
+  showButton?: boolean;
 }
 
 function Card({
@@ -28,6 +29,7 @@ function Card({
   title,
   descriptionInfo,
   imageSize = "large",
+  showButton = true,
 }: CardProps) {
   const imageSizeClass =
     imageSize === "small"
@@ -79,10 +81,11 @@ function Card({
           {descriptionInfo}
         </p>
       )}
-
-      <Button size="sm" className="w-fit mt-5 ml-5 mb-5">
-        Rencontrer
-      </Button>
+      {showButton && (
+        <Button size="sm" className="w-fit mt-5 ml-5 mb-5">
+          Rencontrer
+        </Button>
+      )}
     </div>
   );
 }

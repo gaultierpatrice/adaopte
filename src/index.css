@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import "tailwindcss";
 
 :root {
   --primary-color: #fffaf7;
@@ -31,4 +30,23 @@
 h1,
 .heading {
   font-family: var(--font-family-heading);
+}
+
+footer {
+  font-size: x-small;
+}
+
+footer h2 {
+  color: var(--secondary-color);
+  font-family: var(--font-family-heading);
+  font-size: large;
+}
+
+footer section {
+  padding: 1rem;
+}
+
+footer ul,
+p {
+  padding-top: 1rem;
 }
