@@ -70,23 +70,23 @@ function LandingPage() {
             </NavLink>
           </section>
 
-          <h2 className="flex flex-col justify-center pt-12 text-3xl font-bold ">
+          <h1 className="flex flex-col justify-center  p-10 text-4xl font-bold">
             Comment ça marche
-          </h2>
-          <p className="text-sm px-50 pt-8 text-gray-600 ">
-            Adopter un animal est une décision importante et responsable. Pour
-            vous accompagner, nous avons mis en
+          </h1>
+          <p className="text-sm flex px-50 text-gray-600 justify-center text-center pb-8">
+            adopter un animal est un engagement serieux et à long terme. Voici
+            notre processus d'adoption en
+            <br /> quelques étapes simples.
           </p>
-          <p className="text-sm px-50 mb-5 text-gray-600 ">
-            place un parcours d’adoption simple et transparent, en quelques
-            étapes.
-          </p>
-          <div className="grid grid-cols-4 gap-6 p-8 ">
+
+          <div className="grid grid-cols-4 gap-6 p-8">
             {information.map((information, index) => (
               <Card
                 key={index}
                 {...information}
-                imageUrl={imageMap[information.title] ?? information.imageUrl}
+                imageUrlIcons={
+                  imageMap[information.title] ?? information.imageUrlIcons
+                }
                 imageSize="small"
                 showButton={false}
               />
