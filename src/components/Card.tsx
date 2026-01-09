@@ -1,6 +1,7 @@
 import Button from "../components/Button";
 
 interface CardProps {
+  title?: string;
   name?: string;
   age?: string;
   breed?: string;
@@ -8,8 +9,10 @@ interface CardProps {
   city?: string;
   zipcode?: string;
   description?: string;
+  descriptionInfo?: string;
   imageUrl?: string;
   imageAlt?: string;
+  imageSize?: "small" | "large";
   showButton?: boolean;
 }
 
@@ -23,15 +26,23 @@ function Card({
   description,
   imageUrl,
   imageAlt,
+  title,
+  descriptionInfo,
+  imageSize = "large",
   showButton = true,
 }: CardProps) {
+  const imageSizeClass =
+    imageSize === "small"
+      ? "w-full h-11 object-contain"
+      : "w-full h-56 object-cover";
+
   return (
     <div className="flex flex-col justify-around card w-full max-w-xs bg-white shadow-md">
       {imageUrl && (
         <img
           src={imageUrl}
           alt={imageAlt ?? ""}
-          className="w-full h-56 object-cover"
+          className={`w-full ${imageSizeClass} `}
         />
       )}
       {type && (
@@ -55,9 +66,19 @@ function Card({
           Code postal : {zipcode}
         </p>
       )}
+      {title && (
+        <p className="flex justify-center pt-4 text-sm text-black px-5 font-bold">
+          {title}
+        </p>
+      )}
       {description && (
-        <p className="mt-4 text-sm text-gray-600 leading-relaxed px-5 ">
+        <p className="flex justify-center text-sm text-gray-600 leading-relaxed px-5 ">
           {description}
+        </p>
+      )}
+      {descriptionInfo && (
+        <p className="flex justify-center text-justify py-4 text-sm text-gray-600 leading-relaxed px-5 ">
+          {descriptionInfo}
         </p>
       )}
       {showButton && (

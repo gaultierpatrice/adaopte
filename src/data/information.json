@@ -1,0 +1,22 @@
+[
+  {
+    "title": "1. Trouvez votre compagnon",
+    "descriptionInfo": "Explorez notre base de données d’animaux disponibles à l’adoption. Grâce aux filtres, trouvez l’animal qui correspond le mieux à votre mode de vie et à vos attentes.",
+    "imageUrl": "src/pictures/loupe.png"
+  },
+  {
+    "title": "2. Remplissez une demande",
+    "descriptionInfo": "Complétez le formulaire d’adoption pour l’animal qui vous intéresse. Chaque demande est étudiée avec attention afin de garantir le bien-être de l’animal.",
+    "imageUrl": "src/pictures/papier.png"
+  },
+  {
+    "title": "3. Rencontrez l’animal",
+    "descriptionInfo": "Rendez-vous au refuge pour faire connaissance avec l’animal. Cette rencontre permet de vérifier que le courant passe et que votre mode de vie est compatible..",
+    "imageUrl": "src/pictures/main.png"
+  },
+  {
+    "title": "4. Bienvenue à la maison",
+    "descriptionInfo": "Une fois votre demande validée, vous pouvez accueillir votre nouveau compagnon chez vous. Notre équipe reste disponible pour vous accompagner et répondre à vos questions.",
+    "imageUrl": "src/pictures/maison.png"
+  }
+]
