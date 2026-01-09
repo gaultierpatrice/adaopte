@@ -99,7 +99,7 @@ function LandingPage() {
               ouvriez votre foyer ou votre coeur, vous pouvez offrir une seconde
               chance à un animal abandonné.
             </p>
-            <div className="flex flex-row justify-center gap-5 px-60">
+            <div className="flex flex-row justify-center gap-5 px-20">
               <Button>Adopter un animal</Button>
               <Button className="gap-2" variant="secondary">
                 Faire un don <LuHandHeart />

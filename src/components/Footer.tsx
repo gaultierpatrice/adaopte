@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <>
       <footer className="flex flex-col items-center bg-(--dark-color) text-(--primary-color) p-2">
-        <div className="flex flex-row">
+        <div className="flex flex-row w-full">
           <section className="flex-1">
             <h2>ADAOPTE</h2>
             <p className="">
               Notre mission est de trouver des foyers aimants pour chaque animal
               abandonné et de promouvoir le bien-être animal.
             </p>
-            <div className="flex flex-row justify-between mt-5">
+            <div className="flex flex-row gap-4 mt-5">
               <a
                 href="#"
                 className="flex items-center justify-center h-5 w-5 bg-neutral-700 rounded-full"
@@ -70,7 +70,7 @@ export default function Footer() {
             </ul>
           </section>
         </div>
-        <div className="flex flex-col justify-center items-center text-gray-400 mt-5">
+        <div className="flex flex-col justify-center items-center w-full text-gray-400 mt-5 border-t border-neutral-700">
           <p>© 2025 Adaopte. Tous droits réservés.</p>
           <p>
             Ce site a été développé dans le cadre d'un projet pour ADA Tech

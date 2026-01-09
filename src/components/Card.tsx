@@ -78,7 +78,7 @@ function Card({
         </p>
       )}
       {title && (
-        <p className="flex justify-center text-center pt-4 text-xl text-black px-5 font-bold min-h-[72px] flex items-center justify-center">
+        <p className="flex justify-center text-center pt-4 text-xl text-black px-5 font-bold min-h-[72px] items-center">
           {title}
         </p>
       )}
