@@ -12,7 +12,7 @@ interface CardProps {
   descriptionInfo?: string;
   imageUrl?: string;
   imageAlt?: string;
-  imageSize?: "small" | "large";
+  imageSize?: "small" | "large" | "grid";
   showButton?: boolean;
 }
 
@@ -34,16 +34,16 @@ function Card({
   const imageSizeClass =
     imageSize === "small"
       ? "w-full h-11 object-contain"
+      : imageSize === "grid"
+      ? "w-full h-full object-cover"
       : "w-full h-56 object-cover";
 
   return (
-    <div className="flex flex-col justify-around card w-full max-w-xs bg-white shadow-md">
+    <div className="flex flex-col h-full w-full bg-white shadow-md">
       {imageUrl && (
-        <img
-          src={imageUrl}
-          alt={imageAlt ?? ""}
-          className={`w-full ${imageSizeClass} `}
-        />
+        <div className={imageSize === "grid" ? "h-full w-full" : undefined}>
+          <img src={imageUrl} alt={imageAlt ?? ""} className={imageSizeClass} />
+        </div>
       )}
       {type && (
         <p className="text-sm font-semibold text-gray-500 px-5 pt-4">{type}</p>
