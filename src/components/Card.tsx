@@ -88,7 +88,7 @@ function Card({
         </p>
       )}
       {descriptionInfo && (
-        <p className="flex mt-5 justify-center text-center h-full text-sm text-gray-600 leading-relaxed px-5 ">
+        <p className="flex my-5 justify-center text-center h-full text-sm text-gray-600 leading-relaxed px-5 ">
           {descriptionInfo}
         </p>
       )}
