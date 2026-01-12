@@ -11,7 +11,7 @@ import {
 
 function NavBar() {
   return (
-    <header className="flex flex-row justify-between p-5">
+    <header className="flex flex-row justify-between p-5 bg-(--primary-color)">
       <h2 className="flex items-center font-bold gap-2">
         <span>
           <LuPawPrint />
@@ -33,7 +33,7 @@ function NavBar() {
         <span>Guide de l'adoption</span>
       </a>
       <NavLink to="/devenir-benevole" className="flex items-center gap-2">
-        <LuBone />
+        <LuSquirrel />
         <span>Devenir bénévole</span>
       </NavLink>
       <Button className="flex items-center gap-2">
