@@ -41,13 +41,13 @@ function Card({
       : "w-full h-56 object-cover";
 
   return (
-    <div className="flex flex-col h-full w-full bg-white shadow-md">
+    <div className="flex flex-col w-full bg-white shadow-md justify-between h-full">
       {imageUrl && (
         <div className={imageSize === "grid" ? "h-full w-full" : undefined}>
           <img src={imageUrl} alt={imageAlt ?? ""} className={imageSizeClass} />
         </div>
       )}
-      <div className="p-4 flex justify-center">
+      <div className="flex flex-col justify-around">
         {imageUrlIcons && (
           <img
             src={imageUrlIcons}
@@ -78,7 +78,7 @@ function Card({
         </p>
       )}
       {title && (
-        <p className="flex justify-center text-center pt-4 text-xl text-black px-5 font-bold min-h-[72px] items-center">
+        <p className="mt-5 flex justify-center text-center pt-4 text-xl text-black px-5 font-bold min-h-[72px] items-center">
           {title}
         </p>
       )}
@@ -88,7 +88,7 @@ function Card({
         </p>
       )}
       {descriptionInfo && (
-        <p className="flex pb-10 justify-center text-center h-full text-sm text-gray-600 leading-relaxed px-5 ">
+        <p className="flex mt-5 justify-center text-center h-full text-sm text-gray-600 leading-relaxed px-5 ">
           {descriptionInfo}
         </p>
       )}
