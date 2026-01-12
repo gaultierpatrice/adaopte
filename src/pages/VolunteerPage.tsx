@@ -2,18 +2,6 @@ import ImageWithText from "../components/ImageWithText";
 import volunteerData from "../data/volunteer.json";
 import Card from "../components/Card";
 
-import leafIcon from "../pictures/pousse.png";
-import brainIcon from "../pictures/gens.png";
-import peopleIcon from "../pictures/cerveau.png";
-import starIcon from "../pictures/etoile.png";
-
-const imageMap: Record<string, string> = {
-  "Agir concrètement pour le bien-être animal": leafIcon,
-  "Développer des compétences précieuses": brainIcon,
-  "Rejoindre une communauté engagée": peopleIcon,
-  "Donner du sens à votre temps libre": starIcon,
-};
-
 function VolunteerPage() {
   return (
     <main className="flex flex-col items-center ">
@@ -33,9 +21,7 @@ function VolunteerPage() {
           <Card
             key={index}
             {...volunteerData}
-            imageUrlIcons={
-              imageMap[volunteerData.title] ?? volunteerData.imageUrlIcons
-            }
+            imageUrlIcons={volunteerData.imageUrlIcons}
             imageSize="small"
             showButton={false}
           />

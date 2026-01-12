@@ -6,26 +6,6 @@ import { LuHandHeart } from "react-icons/lu";
 import animals from "../data/data.json";
 import information from "../data/information.json";
 
-import charlieimg from "../pictures/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg";
-import miaimg from "../pictures/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg";
-import cocoimg from "../pictures/chan-swan-NKyl19P5IHg-unsplash.jpg";
-import reximg from "../pictures/alan-king-KZv7w34tluA-unsplash.jpg";
-import lunaimg from "../pictures/jae-park-7GX5aICb5i4-unsplash.jpg";
-import biscuitimg from "../pictures/yosei-g-OVgE3m4MHKM-unsplash.jpg";
-import rioimg from "../pictures/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg";
-import rubyimg from "../pictures/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg";
-
-const imageMap: Record<string, string> = {
-  Charlie: charlieimg,
-  Mia: miaimg,
-  Coco: cocoimg,
-  Rex: reximg,
-  Luna: lunaimg,
-  Biscuit: biscuitimg,
-  Rio: rioimg,
-  Ruby: rubyimg,
-};
-
 function LandingPage() {
   return (
     <>
@@ -49,7 +29,8 @@ function LandingPage() {
               {animals.map((animal, index) => (
                 <Card
                   key={index}
-                  imageUrl={imageMap[animal.name] ?? animal.imageUrl}
+                  {...animal}
+                  imageUrl={animal.imageUrl}
                   showButton={false}
                 />
               ))}
@@ -73,9 +54,7 @@ function LandingPage() {
               <Card
                 key={index}
                 {...information}
-                imageUrlIcons={
-                  imageMap[information.title] ?? information.imageUrlIcons
-                }
+                imageUrlIcons={information.imageUrlIcons}
                 imageSize="small"
                 showButton={false}
               />
