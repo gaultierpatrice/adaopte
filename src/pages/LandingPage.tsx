@@ -5,8 +5,27 @@ import { NavLink } from "react-router-dom";
 import { LuHandHeart } from "react-icons/lu";
 import animals from "../data/data.json";
 import information from "../data/information.json";
+import AnimalFilter from "../components/AnimalFilter.tsx";
+import { useState } from "react";
 
-function LandingPage() {
+type SearchProps = {
+  search: string;
+  selectedType: string;
+  animalsToDisplay: [];
+};
+
+function LandingPage(props: SearchProps) {
+  const [search, setSearch] = useState("");
+  const [selectedType, setSelectedType] = useState("");
+
+  const animalsToDisplay = animals.filter((animal) => {
+    const matchesCity = animal.city
+      .toLowerCase()
+      .includes(search.toLowerCase());
+    const matchesType = selectedType === "" || animal.type === selectedType;
+    return matchesCity && matchesType;
+  });
+
   return (
     <>
       <main className="flex flex-col items-center">
@@ -16,6 +35,16 @@ function LandingPage() {
           title="Donnons-leur autant qu'ils nous apportent"
           subtitle="Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal parmi nos animaux disponibles à l'adoption"
         />
+        <div className="flex flex-row">
+          <AnimalFilter
+            search={search}
+            setSearch={setSearch}
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+            animalsToDisplay={animalsToDisplay}
+          />
+        </div>
+
         <div className="flex flex-col items-center w-full">
           <section className="flex flex-col justify-center items-center bg-gray-100">
             <h1 className="flex flex-col justify-center items-center text-3xl font-bold mt-5">
@@ -27,7 +56,7 @@ function LandingPage() {
             </p>
 
             <div className="grid grid-flow-col grid-rows-3 gap-4 max-h-[1200px] p-10">
-              {animals.map((animal, index) => {
+              {animalsToDisplay.map((animal, index) => {
                 // Define which items should span 2 rows
                 const rowSpanClass = [0, 3, 4, 7].includes(index)
                   ? "row-span-2"
