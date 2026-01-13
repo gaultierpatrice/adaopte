@@ -7,24 +7,32 @@ import animals from "../data/data.json";
 import information from "../data/information.json";
 import AnimalFilter from "../components/AnimalFilter.tsx";
 import { useState } from "react";
+import usePagination from "../hooks/usePagination.tsx";
 
 type SearchProps = {
   search: string;
   selectedType: string;
-  animalsToDisplay: [];
+  filteredAnimals: [];
 };
 
 function LandingPage(props: SearchProps) {
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState("");
 
-  const animalsToDisplay = animals.filter((animal) => {
+  const filteredAnimals = animals.filter((animal) => {
     const matchesCity = animal.city
       .toLowerCase()
       .includes(search.toLowerCase());
     const matchesType = selectedType === "" || animal.type === selectedType;
     return matchesCity && matchesType;
   });
+
+  const {
+    currentItems: animalsToDisplay,
+    currentPage,
+    totalPages,
+    goToPage,
+  } = usePagination(filteredAnimals, 8);
 
   return (
     <>
@@ -41,7 +49,7 @@ function LandingPage(props: SearchProps) {
             setSearch={setSearch}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
-            animalsToDisplay={animalsToDisplay}
+            filteredAnimals={filteredAnimals}
           />
         </div>
 

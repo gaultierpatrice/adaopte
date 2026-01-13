@@ -3,6 +3,7 @@ import animals from "../data/data.json";
 import AnimalFilter from "../components/AnimalFilter";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import usePagination from "../hooks/usePagination.tsx";
 
 function ListingPage() {
   const [searchParams] = useSearchParams();
@@ -13,11 +14,18 @@ function ListingPage() {
   const [search, setSearch] = useState(cityFromUrl);
   const [selectedType, setSelectedType] = useState(typeFromUrl);
 
-  const animalsToDisplay = animals.filter(
+  const filteredAnimals = animals.filter(
     (animal) =>
       (!search || animal.city.toLowerCase().includes(search.toLowerCase())) &&
       (!selectedType || animal.type === selectedType)
   );
+
+  const {
+    currentItems: animalsToDisplay,
+    currentPage,
+    totalPages,
+    goToPage,
+  } = usePagination(filteredAnimals, 8);
 
   useEffect(() => {
     setSearch(cityFromUrl);
@@ -32,7 +40,7 @@ function ListingPage() {
           setSearch={setSearch}
           selectedType={selectedType}
           setSelectedType={setSelectedType}
-          animalsToDisplay={animalsToDisplay}
+          filteredAnimals={filteredAnimals}
         />
       </div>
 
@@ -40,6 +48,21 @@ function ListingPage() {
         <div className="grid grid-cols-4 gap-6 p-15">
           {animalsToDisplay.map((animal, index) => (
             <Card key={index} {...animal} imageUrl={animal.imageUrl} />
+          ))}
+        </div>
+
+        {/* Pagination Controls */}
+        <div className="flex gap-2 my-5">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => goToPage(page)}
+              className={`px-3 py-1 ${
+                page === currentPage ? "bg-blue-500 text-white" : "bg-gray-200"
+              }`}
+            >
+              {page}
+            </button>
           ))}
         </div>
       </main>
