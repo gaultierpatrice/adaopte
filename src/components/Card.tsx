@@ -15,6 +15,7 @@ interface CardProps {
   imageAlt?: string;
   imageSize?: "small" | "large" | "grid";
   showButton?: boolean;
+  className?: string;
 }
 
 function Card({
@@ -32,6 +33,7 @@ function Card({
   imageUrlIcons,
   imageSize = "large",
   showButton = true,
+  className,
 }: CardProps) {
   const imageSizeClass =
     imageSize === "small"
@@ -41,7 +43,11 @@ function Card({
       : "w-full h-56 object-cover";
 
   return (
-    <div className="flex flex-col w-full bg-white shadow-md justify-between h-full">
+    <div
+      className={`flex flex-col w-full bg-white shadow-md justify-between ${
+        className ?? ""
+      }`}
+    >
       {imageUrl && (
         <div className={imageSize === "grid" ? "h-full w-full" : undefined}>
           <img src={imageUrl} alt={imageAlt ?? ""} className={imageSizeClass} />
