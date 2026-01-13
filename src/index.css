@@ -50,3 +50,7 @@ footer ul,
 p {
   padding-top: 1rem;
 }
+.required-label::after {
+  content: " *";
+  color: red;
+}
