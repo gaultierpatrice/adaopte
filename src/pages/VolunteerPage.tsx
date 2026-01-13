@@ -156,8 +156,17 @@ function VolunteerPage() {
           </div>
         </form>
       </div>
+
       <div className="flex flex-col justify-center items-center p-115 w-full  bg-gray-100"></div>
-      <div className="grid grid-cols-4 gap-6 p-8">
+      <div className="flex flex-col justify-center items-center p-15 w-full  bg-white">
+        <h1 className="text-5xl font-bold">Pourquoi devenir bénévole ?</h1>
+        <p className="text-sm text-center text-gray-600 px-50">
+          Être bénévole chez Adaopte, c'est bien plus qu'un coup de main : c'est
+          un engagement du coeur, <br /> qui change des vies - humaines et
+          animales.
+        </p>
+      </div>
+      <div className="grid grid-cols-4 gap-7 p-9 mx-10">
         {volunteerData.map((volunteerData, index) => (
           <Card
             key={index}
@@ -165,6 +174,7 @@ function VolunteerPage() {
             imageUrlIcons={volunteerData.imageUrlIcons}
             imageSize="small"
             showButton={false}
+            className="h-90 shadow-xl rounded-xl"
           />
         ))}
       </div>
