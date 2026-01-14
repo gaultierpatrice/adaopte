@@ -3,6 +3,8 @@ import volunteerData from "../data/volunteer.json";
 import Card from "../components/Card";
 import Button from "../components/Button.tsx";
 import { useState } from "react";
+import Claire from "../pictures/omid-armin-yisZonvqh54-unsplash.jpg";
+import Juan from "../pictures/christian-buehner-DItYlc26zVI-unsplash.jpg";
 
 function VolunteerPage() {
   const [nom, setNom] = useState("");
@@ -179,10 +181,59 @@ function VolunteerPage() {
         ))}
       </div>
 
-      <div className="flex flex-col justify-center items-center p-50 w-full  bg-pink-200">
-        <h2 className="text-sm font-bold mb-5 underline">
-          témoignages de bénévoles
-        </h2>
+      <div className="grid grid-row-2 gap-7 bg-gray-100 w-full h-full p-9 mx-10">
+        <h1 className=" grid justify-center text-5xl font-bold p-6">
+          Témoignage de bénévoles
+        </h1>
+        <p className="text-sm text-center text-gray-600 ">
+          Découvrez ce que nos bénévoles partagent de leur éxperience avec
+          Adaopte
+        </p>
+        <div className="bg-white shadow-xl rounded-xl p-6 max-w-5xl mx-auto">
+          {/* Ligne du haut : photo + nom */}
+          <div className="flex flex-row items-center gap-4 ">
+            <img
+              src={Claire}
+              alt="benevole"
+              className="w-14 h-14 rounded-full object-cover"
+            />
+
+            <div>
+              <h3 className="font-semibold text-lg">Claire M.</h3>
+              <p className="text-gray-500 text-sm">Bénévole depuis 1 an</p>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-700 italic leading-relaxed">
+            "J'ai commencé à m'occuper de Louna, une chienne timide arrivée au
+            refuge. Petit à petit, elle m'a fait confiance. Aujourd'hui, elle a
+            été adoptée, mais je garde un souvenir inoubliable de notre
+            complicité. Être bénévole chez Adaopte, c'est offrir de l'amour...
+            et en recevoir énormément."
+          </p>
+        </div>
+        <div className="bg-white shadow-xl rounded-xl p-4 max-w-5xl mx-auto">
+          <div className="flex flex-row items-center gap-4 ">
+            <img
+              src={Juan}
+              alt="benevole"
+              className="w-14 h-14 rounded-full object-cover"
+            />
+
+            <div>
+              <h3 className="font-semibold text-lg">Juan R.</h3>
+              <p className="text-gray-500 text-sm">Bénévole depuis 8 mois</p>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-700 italic leading-relaxed">
+            "Je voulais m'investir concrètement pour une cause qui me tient à
+            coeur. Avec Adaopte, j'ai découvert le refuge, les histoires de
+            chaque animal, et une equipe soudée. Marcher avec les chiens, jouer
+            avec les chats, les voir progresser... C'est profondément
+            gratifiant."
+          </p>
+        </div>
       </div>
       <div className="flex flex-col justify-center items-center p-50 w-full bg-pink-300">
         <h2 className="text-sm font-bold mb-5 underline">
