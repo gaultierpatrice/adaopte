@@ -10,13 +10,7 @@ import { useState } from "react";
 import usePagination from "../hooks/usePagination.tsx";
 import AnimalImage from "../components/AnimalImage.tsx";
 
-type SearchProps = {
-  search: string;
-  selectedType: string;
-  filteredAnimals: [];
-};
-
-function LandingPage(props: SearchProps) {
+function LandingPage() {
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState("");
 
@@ -28,12 +22,7 @@ function LandingPage(props: SearchProps) {
     return matchesCity && matchesType;
   });
 
-  const {
-    currentItems: animalsToDisplay,
-    currentPage,
-    totalPages,
-    goToPage,
-  } = usePagination(filteredAnimals, 8);
+  const { currentItems: animalsToDisplay } = usePagination(filteredAnimals, 8);
 
   return (
     <>
@@ -44,17 +33,18 @@ function LandingPage(props: SearchProps) {
           title="Donnons-leur autant qu'ils nous apportent"
           subtitle="Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal parmi nos animaux disponibles à l'adoption"
         />
-        <div className="flex flex-row">
+        <div className="flex flex-row absolute bg-(--primary-color) px-5 top-80 rounded-lg">
           <AnimalFilter
             search={search}
             setSearch={setSearch}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
-            filteredAnimals={filteredAnimals}
+            filteredAnimalsCount={filteredAnimals.length}
+            showOptions={false}
           />
         </div>
 
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full mt-10">
           <section className="flex flex-col justify-center items-center bg-gray-100">
             <h1 className="flex flex-col justify-center items-center text-3xl font-bold mt-5">
               Nos animaux à adopter
@@ -64,7 +54,7 @@ function LandingPage(props: SearchProps) {
               aimante. Chaque photo raconte une histoire et un espoir.
             </p>
 
-            <div className="grid grid-flow-col grid-rows-3 gap-4 max-h-[1200px] p-10">
+            <div className="grid grid-flow-col grid-rows-3 gap-4 max-h-300 p-10">
               {animalsToDisplay.map((animal, index) => {
                 // Define which items should span 2 rows
                 const rowSpanClass = [0, 3, 4, 7].includes(index)
@@ -104,7 +94,7 @@ function LandingPage(props: SearchProps) {
               />
             ))}
           </div>
-          <div className="flex flex-col items-center justify-around bg-gray-100 min-h-[300px] w-full">
+          <div className="flex flex-col items-center justify-around bg-gray-100 min-h-75 w-full">
             <h1 className="text-5xl mt-5">Prêt.e à changer une vie ?</h1>
             <p className="text-sm px-50">
               Adoptez, partagez, soutenez... Chaque geste compte. Que vous
@@ -112,11 +102,21 @@ function LandingPage(props: SearchProps) {
               chance à un animal abandonné.
             </p>
             <div className="flex flex-row justify-center gap-5 px-20">
-              <Button>Adopter un animal</Button>
+              <NavLink to="/listing">
+                <Button className="hover:cursor-pointer">
+                  Adopter un animal
+                </Button>
+              </NavLink>
+
               <Button className="gap-2" variant="secondary">
                 Faire un don <LuHandHeart />
               </Button>
-              <Button variant="accent">Devenir bénévole</Button>
+
+              <NavLink to="/devenir-benevole">
+                <Button variant="accent" className="hover:cursor-pointer">
+                  Devenir bénévole
+                </Button>
+              </NavLink>
             </div>
           </div>
         </div>

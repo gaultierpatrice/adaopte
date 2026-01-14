@@ -27,7 +27,7 @@ const sizeClasses: Record<ButtonSize, string> = {
 export default function Button({
   variant = "primary",
   size = "md",
-  className = "",
+  className = "focus:outline-2",
   ...props
 }: ButtonProps) {
   return (

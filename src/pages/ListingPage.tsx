@@ -40,11 +40,12 @@ function ListingPage() {
           setSearch={setSearch}
           selectedType={selectedType}
           setSelectedType={setSelectedType}
-          filteredAnimals={filteredAnimals}
+          filteredAnimalsCount={filteredAnimals.length}
+          showOptions={true}
         />
       </div>
 
-      <main className="min-h-[650px] flex flex-col items-center justify-center">
+      <main className="min-h-162.5 flex flex-col items-center justify-center">
         <div className="grid grid-cols-4 gap-6 p-15">
           {animalsToDisplay.map((animal, index) => (
             <Card key={index} {...animal} imageUrl={animal.imageUrl} />
