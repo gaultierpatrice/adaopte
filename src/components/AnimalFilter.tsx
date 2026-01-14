@@ -37,8 +37,8 @@ export default function AnimalFilter({
   const animalTypes = Array.from(new Set(animals.map((animal) => animal.type)));
 
   return (
-    <div className="flex flex-col justify-center min-h-28">
-      <div className="flex flex-row items-center justify-center gap-2">
+    <div className="flex flex-col justify-center min-h-28 w-[600px]">
+      <div className="flex flex-row items-center justify-center gap-5">
         <TypeFilter
           options={animalTypes}
           value={selectedType}
@@ -52,6 +52,7 @@ export default function AnimalFilter({
             placeholder="Votre Ville"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            className="w-full"
           />
         </div>
         <Button className="gap-2 hover:cursor-pointer" onClick={handleSearch}>
@@ -60,7 +61,7 @@ export default function AnimalFilter({
         </Button>
       </div>
       {showOptions && (
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between mt-5">
           <div>Nombre animaux trouvés: {filteredAnimalsCount}</div>
           <div>
             <Button

@@ -10,12 +10,12 @@ export default function TypeFilter({
   onChange,
 }: TypeFilterProps) {
   return (
-    <>
+    <div className="flex flex-col">
       <h2>Type d'animal</h2>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="border rounded px-3 py-2"
+        className="border rounded w-full"
       >
         <option value="">Tous les types</option>
 
@@ -25,6 +25,6 @@ export default function TypeFilter({
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 }
