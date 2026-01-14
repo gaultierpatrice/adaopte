@@ -78,5 +78,226 @@
     "zipcode": "74400",
     "description": "Ruby est une boule de neige pleine d’amour ! Elle adore les promenades et les câlins par temps frais.",
     "imageUrl": "src/pictures/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg"
+  },
+  {
+    "name": "Oscar",
+    "age": "6 ans",
+    "breed": "Golden Retriever",
+    "type": "Chien",
+    "city": "Nantes",
+    "zipcode": "44000",
+    "description": "Oscar est un chien sociable et équilibré, toujours heureux de partager des moments avec sa famille.",
+    "imageUrl": "src/pictures/oscar.jpg"
+  },
+  {
+    "name": "Plume",
+    "age": "1 an",
+    "breed": "Chat gris",
+    "type": "Chat",
+    "city": "Rennes",
+    "zipcode": "35000",
+    "description": "Plume est douce et discrète, appréciant autant la tranquillité que les jeux légers.",
+    "imageUrl": "src/pictures/plume.jpg"
+  },
+  {
+    "name": "Volt",
+    "age": "2 ans",
+    "breed": "Border Collie",
+    "type": "Chien",
+    "city": "Clermont-Ferrand",
+    "zipcode": "63000",
+    "description": "Volt est intelligent et dynamique, parfait pour une personne active aimant les longues sorties.",
+    "imageUrl": "src/pictures/volt.jpg"
+  },
+  {
+    "name": "Noisette",
+    "age": "10 mois",
+    "breed": "Hamster doré",
+    "type": "Rongeur",
+    "city": "Dijon",
+    "zipcode": "21000",
+    "description": "Noisette est calme et attachante, idéale pour un environnement paisible.",
+    "imageUrl": "src/pictures/noisette.jpg"
+  },
+  {
+    "name": "Simba",
+    "age": "4 ans",
+    "breed": "Chat Bengal",
+    "type": "Chat",
+    "city": "Montpellier",
+    "zipcode": "34000",
+    "description": "Simba est élégant et curieux, toujours attentif à ce qui l’entoure.",
+    "imageUrl": "src/pictures/simba.jpg"
+  },
+  {
+    "name": "Snow",
+    "age": "3 ans",
+    "breed": "Lapin angora",
+    "type": "Lapin",
+    "city": "Besançon",
+    "zipcode": "25000",
+    "description": "Snow est très doux et apprécie les moments de calme en compagnie des humains.",
+    "imageUrl": "src/pictures/snow.jpg"
+  },
+  {
+    "name": "Jazz",
+    "age": "7 ans",
+    "breed": "Bouledogue français",
+    "type": "Chien",
+    "city": "Paris",
+    "zipcode": "75011",
+    "description": "Jazz est posé et affectueux, parfait pour la vie en appartement.",
+    "imageUrl": "src/pictures/jazz.jpg"
+  },
+  {
+    "name": "Nina",
+    "age": "2 ans",
+    "breed": "Chat tigré",
+    "type": "Chat",
+    "city": "Orléans",
+    "zipcode": "45000",
+    "description": "Nina est joueuse et sociable, aimant observer son environnement depuis les hauteurs.",
+    "imageUrl": "src/pictures/nina.jpg"
+  },
+  {
+    "name": "Max",
+    "age": "5 ans",
+    "breed": "Labrador",
+    "type": "Chien",
+    "city": "La Rochelle",
+    "zipcode": "17000",
+    "description": "Max est un chien gentil et fiable, très apprécié des enfants.",
+    "imageUrl": "src/pictures/max.jpg"
+  },
+  {
+    "name": "Kiwi",
+    "age": "6 mois",
+    "breed": "Perroquet",
+    "type": "Oiseau",
+    "city": "Toulon",
+    "zipcode": "83000",
+    "description": "Kiwi est curieux et expressif, aimant interagir avec son entourage.",
+    "imageUrl": "src/pictures/kiwi.jpg"
+  },
+
+  {
+    "name": "Pablo",
+    "age": "3 ans",
+    "breed": "Teckel",
+    "type": "Chien",
+    "city": "Avignon",
+    "zipcode": "84000",
+    "description": "Pablo est vif et affectueux, très attaché à ses humains.",
+    "imageUrl": "src/pictures/pablo.jpg"
+  },
+  {
+    "name": "Lily",
+    "age": "1 an",
+    "breed": "Chat blanc",
+    "type": "Chat",
+    "city": "Ajaccio",
+    "zipcode": "20000",
+    "description": "Lily est délicate et calme, appréciant les environnements doux.",
+    "imageUrl": "src/pictures/lily.jpg"
+  },
+  {
+    "name": "Moka",
+    "age": "8 mois",
+    "breed": "Lapin bélier",
+    "type": "Lapin",
+    "city": "Colmar",
+    "zipcode": "68000",
+    "description": "Moka est curieux et sociable, aimant explorer calmement.",
+    "imageUrl": "src/pictures/moka.jpg"
+  },
+  {
+    "name": "Thor",
+    "age": "4 ans",
+    "breed": "Husky",
+    "type": "Chien",
+    "city": "Gap",
+    "zipcode": "05000",
+    "description": "Thor est énergique et indépendant, parfait pour les grands espaces.",
+    "imageUrl": "src/pictures/thor.jpg"
+  },
+  {
+    "name": "Olive",
+    "age": "2 ans",
+    "breed": "Chat européen",
+    "type": "Chat",
+    "city": "Aix-en-Provence",
+    "zipcode": "13100",
+    "description": "Olive est curieuse et affectueuse, toujours proche de ses humains.",
+    "imageUrl": "src/pictures/olive.jpg"
+  },
+  {
+    "name": "Peanut",
+    "age": "1 an",
+    "breed": "Souris domestique",
+    "type": "Rongeur",
+    "city": "Le Mans",
+    "zipcode": "72000",
+    "description": "Peanut est discrète et active, idéale pour un foyer calme.",
+    "imageUrl": "src/pictures/peanut.jpg"
+  },
+  {
+    "name": "Rocky",
+    "age": "6 ans",
+    "breed": "Boxer",
+    "type": "Chien",
+    "city": "Reims",
+    "zipcode": "51100",
+    "description": "Rocky est joueur et loyal, très proche de sa famille.",
+    "imageUrl": "src/pictures/rocky.jpg"
+  },
+  {
+    "name": "Saphir",
+    "age": "3 ans",
+    "breed": "Chat bleu russe",
+    "type": "Chat",
+    "city": "Nancy",
+    "zipcode": "54000",
+    "description": "Saphir est élégant et calme, appréciant les ambiances sereines.",
+    "imageUrl": "src/pictures/saphir.jpg"
+  },
+  {
+    "name": "Caramel",
+    "age": "9 mois",
+    "breed": "Cochon d'Inde",
+    "type": "Rongeur",
+    "city": "Albi",
+    "zipcode": "81000",
+    "description": "Caramel est sociable et gourmand, adorant les légumes frais.",
+    "imageUrl": "src/pictures/caramel.jpg"
+  },
+  {
+    "name": "Happy",
+    "age": "5 ans",
+    "breed": "Cavalier King Charles",
+    "type": "Chien",
+    "city": "Chartres",
+    "zipcode": "28000",
+    "description": "Happy est doux et très affectueux, parfait compagnon de vie.",
+    "imageUrl": "src/pictures/happy.jpg"
+  },
+  {
+    "name": "Zelda",
+    "age": "2 ans",
+    "breed": "Chat écaille de tortue",
+    "type": "Chat",
+    "city": "Vannes",
+    "zipcode": "56000",
+    "description": "Zelda est vive et expressive, avec un fort caractère attachant.",
+    "imageUrl": "src/pictures/zelda.jpg"
+  },
+  {
+    "name": "Flocon",
+    "age": "4 ans",
+    "breed": "Lapin blanc",
+    "type": "Lapin",
+    "city": "Épinal",
+    "zipcode": "88000",
+    "description": "Flocon est paisible et très doux, idéal pour un foyer tranquille.",
+    "imageUrl": "src/pictures/flocon.jpg"
   }
 ]
