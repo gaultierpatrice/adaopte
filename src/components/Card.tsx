@@ -44,7 +44,7 @@ function Card({
 
   return (
     <div
-      className={`flex flex-col w-full bg-white shadow-md justify-between h-full ${
+      className={`flex flex-col w-full bg-white shadow-md justify-between ${
         className ?? ""
       }`}
     >

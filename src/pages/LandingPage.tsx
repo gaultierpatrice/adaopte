@@ -8,6 +8,7 @@ import information from "../data/information.json";
 import AnimalFilter from "../components/AnimalFilter.tsx";
 import { useState } from "react";
 import usePagination from "../hooks/usePagination.tsx";
+import AnimalImage from "../components/AnimalImage.tsx";
 
 type SearchProps = {
   search: string;
@@ -72,11 +73,7 @@ function LandingPage(props: SearchProps) {
 
                 return (
                   <div key={animal.name} className={`${rowSpanClass} h-full`}>
-                    <Card
-                      imageSize="grid"
-                      imageUrl={animal.imageUrl}
-                      showButton={false}
-                    />
+                    <AnimalImage src={animal.imageUrl} alt={animal.name} />
                   </div>
                 );
               })}

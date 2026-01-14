@@ -174,7 +174,7 @@ function VolunteerPage() {
             imageUrlIcons={volunteerData.imageUrlIcons}
             imageSize="small"
             showButton={false}
-            className="h-90 shadow-xl rounded-xl"
+            className="h-92 shadow-xl rounded-xl"
           />
         ))}
       </div>
