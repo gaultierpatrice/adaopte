@@ -16,24 +16,28 @@ export default function Footer() {
             </p>
             <div className="flex flex-row gap-4 mt-5">
               <a
+                aria-label="link to facebook"
                 href="#"
                 className="flex items-center justify-center h-5 w-5 bg-neutral-700 rounded-full"
               >
                 <LuFacebook />
               </a>
               <a
+                aria-label="link to instagram"
                 href="#"
                 className="flex items-center justify-center h-5 w-5 bg-neutral-700 rounded-full"
               >
                 <FaInstagram />
               </a>
               <a
+                aria-label="link to linkedin"
                 href="#"
                 className="flex items-center justify-center h-5 w-5 bg-neutral-700 rounded-full"
               >
                 <SlSocialLinkedin />
               </a>
               <a
+                aria-label="link to twitch"
                 href="#"
                 className="flex items-center justify-center h-5 w-5 bg-neutral-700 rounded-full"
               >
