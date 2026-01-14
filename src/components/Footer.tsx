@@ -52,7 +52,7 @@ export default function Footer() {
                 <a href="#">Conseils d'adoption</a>
               </li>
               <li>
-                <a href="mailto:gaultiercode@gmail.com">Nous contacter</a>
+                <a href="mailto:contact@adaopte.fr">Nous contacter</a>
               </li>
               <li>
                 <a href="#">Mentions légales</a>
