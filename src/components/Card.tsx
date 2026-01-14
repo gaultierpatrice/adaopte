@@ -16,7 +16,6 @@ interface CardProps {
   imageSize?: "small" | "large" | "grid";
   showButton?: boolean;
   className?: string;
-  member?: string;
 }
 
 function Card({
@@ -35,7 +34,6 @@ function Card({
   imageSize = "large",
   showButton = true,
   className,
-  member,
 }: CardProps) {
   const imageSizeClass =
     imageSize === "small"
@@ -93,11 +91,7 @@ function Card({
           {title}
         </p>
       )}
-      {member && (
-        <p className="flex my-5 justify-center text-center h-full text-sm text-gray-600 leading-relaxed px-5 ">
-          {member}
-        </p>
-      )}
+
       {description && (
         <p className="flex justify-center text-sm text-gray-600 leading-relaxed px-5 ">
           {description}
