@@ -28,12 +28,7 @@ function LandingPage(props: SearchProps) {
     return matchesCity && matchesType;
   });
 
-  const {
-    currentItems: animalsToDisplay,
-    currentPage,
-    totalPages,
-    goToPage,
-  } = usePagination(filteredAnimals, 8);
+  const { currentItems: animalsToDisplay } = usePagination(filteredAnimals, 8);
 
   return (
     <>
@@ -112,11 +107,21 @@ function LandingPage(props: SearchProps) {
               chance à un animal abandonné.
             </p>
             <div className="flex flex-row justify-center gap-5 px-20">
-              <Button>Adopter un animal</Button>
+              <NavLink to="/listing">
+                <Button className="hover:cursor-pointer">
+                  Adopter un animal
+                </Button>
+              </NavLink>
+
               <Button className="gap-2" variant="secondary">
                 Faire un don <LuHandHeart />
               </Button>
-              <Button variant="accent">Devenir bénévole</Button>
+
+              <NavLink to="/devenir-benevole">
+                <Button variant="accent" className="hover:cursor-pointer">
+                  Devenir bénévole
+                </Button>
+              </NavLink>
             </div>
           </div>
         </div>

@@ -52,7 +52,7 @@ export default function AnimalFilter({
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <Button className="gap-2" onClick={handleSearch}>
+        <Button className="gap-2 hover:cursor-pointer" onClick={handleSearch}>
           Rencontrer
           <img src="src/pictures/loupe.png" className="max-h-5" />
         </Button>
@@ -60,7 +60,11 @@ export default function AnimalFilter({
       <div className="flex flex-row justify-between">
         <div>Nombre animaux trouvés: {filteredAnimals.length}</div>
         <div>
-          <Button variant="accent" onClick={clearFilters}>
+          <Button
+            variant="accent"
+            onClick={clearFilters}
+            className="hover:cursor-pointer"
+          >
             réinitialiser les filtres
           </Button>
         </div>
