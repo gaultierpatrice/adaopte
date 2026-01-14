@@ -235,10 +235,21 @@ function VolunteerPage() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center p-50 w-full bg-pink-300">
-        <h2 className="text-sm font-bold mb-5 underline">
-          des questions ? contactez-nous !
-        </h2>
+      <div className="flex flex-col items-center justify-around bg-gray-100 min-h-75 w-full">
+        <h1 className="text-5xl font-bold">des questions ?</h1>
+        <p className="text-sm text-center">
+          Nous sommes là pour repondre à toutes vos interrogations concernant le
+          bénévolat chez Adaopte.
+          <br />
+          N'hésitez pas à nous contacter pour en savoir plus sur notre démarche.
+        </p>
+        <div className="flex flex-row justify-center gap-5 p-4 px-20">
+          <Button className="hover:cursor-pointer">Foire aux questions</Button>
+
+          <Button className="gap-2 " variant="secondary">
+            Contactez-nous
+          </Button>
+        </div>
       </div>
     </main>
   );
