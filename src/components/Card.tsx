@@ -44,6 +44,9 @@ function Card({
       ? "w-full h-full object-cover"
       : "w-full h-56 object-cover";
 
+  function meetAnimal() {
+    console.log(`Nom de l'animal: ${name}, Type: ${type}`);
+  }
   return (
     <div
       className={`flex flex-col w-full bg-white shadow-md justify-between rounded-xl overflow-hidden ${
@@ -86,7 +89,7 @@ function Card({
         </p>
       )}
       {title && (
-        <p className="mt-5 flex justify-center text-center pt-4 text-xl text-black px-5 font-bold min-h-[72px] items-center">
+        <p className="mt-5 flex justify-center text-center pt-4 text-xl text-black px-5 font-bold min-h-18 items-center">
           {title}
         </p>
       )}
@@ -107,7 +110,7 @@ function Card({
       )}
 
       {showButton && (
-        <Button size="sm" className="w-fit mt-5 ml-5 mb-5">
+        <Button size="sm" className="w-fit mt-5 ml-5 mb-5" onClick={meetAnimal}>
           Rencontrer
         </Button>
       )}

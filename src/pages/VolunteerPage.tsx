@@ -149,8 +149,8 @@ function VolunteerPage() {
               disabled={!isFormValid}
               className={`px-4 py-2 rounded ${
                 isFormValid
-                  ? "bg-pink-500 text-white"
-                  : "bg-gray-400 cursor-not-allowed"
+                  ? "bg-pink-500 text-white cursor-pointer"
+                  : "bg-gray-400 cursor-not-allowed hover:bg-gray-400"
               }`}
             >
               Envoyer ma candidature

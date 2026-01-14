@@ -8,14 +8,21 @@ export default function AnimalFilter({
   setSearch,
   selectedType,
   setSelectedType,
-  animalsToDisplay,
+  filteredAnimalsCount,
+  showOptions = true,
 }: {
   search: string;
   setSearch: (value: string) => void;
   selectedType: string;
   setSelectedType: (value: string) => void;
-  animalsToDisplay: any[];
+  filteredAnimalsCount: number;
+  showOptions: boolean;
 }) {
+  function clearFilters() {
+    setSearch("");
+    setSelectedType("");
+  }
+
   const navigate = useNavigate();
 
   const handleSearch = () => {
@@ -30,8 +37,8 @@ export default function AnimalFilter({
   const animalTypes = Array.from(new Set(animals.map((animal) => animal.type)));
 
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row justify-center items-center gap-5 min-h-[300px]">
+    <div className="flex flex-col justify-center min-h-28">
+      <div className="flex flex-row items-center justify-center gap-2">
         <TypeFilter
           options={animalTypes}
           value={selectedType}
@@ -47,17 +54,25 @@ export default function AnimalFilter({
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <Button className="gap-2" onClick={handleSearch}>
+        <Button className="gap-2 hover:cursor-pointer" onClick={handleSearch}>
           Rencontrer
           <img src="src/pictures/loupe.png" className="max-h-5" />
         </Button>
       </div>
-      <div className="flex flex-row justify-between">
-        <div>Nombre animaux trouvés: {animalsToDisplay.length}</div>
-        <div>
-          <a href="#">réinitialiser les filtres</a>
+      {showOptions && (
+        <div className="flex flex-row justify-between">
+          <div>Nombre animaux trouvés: {filteredAnimalsCount}</div>
+          <div>
+            <Button
+              variant="accent"
+              onClick={clearFilters}
+              className="hover:cursor-pointer"
+            >
+              réinitialiser les filtres
+            </Button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
