@@ -10,13 +10,7 @@ import { useState } from "react";
 import usePagination from "../hooks/usePagination.tsx";
 import AnimalImage from "../components/AnimalImage.tsx";
 
-type SearchProps = {
-  search: string;
-  selectedType: string;
-  filteredAnimals: [];
-};
-
-function LandingPage(props: SearchProps) {
+function LandingPage() {
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState("");
 
@@ -45,7 +39,7 @@ function LandingPage(props: SearchProps) {
             setSearch={setSearch}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
-            filteredAnimals={filteredAnimals}
+            filteredAnimalsCount={filteredAnimals.length}
           />
         </div>
 
@@ -59,7 +53,7 @@ function LandingPage(props: SearchProps) {
               aimante. Chaque photo raconte une histoire et un espoir.
             </p>
 
-            <div className="grid grid-flow-col grid-rows-3 gap-4 max-h-[1200px] p-10">
+            <div className="grid grid-flow-col grid-rows-3 gap-4 max-h-300 p-10">
               {animalsToDisplay.map((animal, index) => {
                 // Define which items should span 2 rows
                 const rowSpanClass = [0, 3, 4, 7].includes(index)
@@ -99,7 +93,7 @@ function LandingPage(props: SearchProps) {
               />
             ))}
           </div>
-          <div className="flex flex-col items-center justify-around bg-gray-100 min-h-[300px] w-full">
+          <div className="flex flex-col items-center justify-around bg-gray-100 min-h-75 w-full">
             <h1 className="text-5xl mt-5">Prêt.e à changer une vie ?</h1>
             <p className="text-sm px-50">
               Adoptez, partagez, soutenez... Chaque geste compte. Que vous

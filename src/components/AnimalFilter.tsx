@@ -8,13 +8,13 @@ export default function AnimalFilter({
   setSearch,
   selectedType,
   setSelectedType,
-  filteredAnimals,
+  filteredAnimalsCount,
 }: {
   search: string;
   setSearch: (value: string) => void;
   selectedType: string;
   setSelectedType: (value: string) => void;
-  filteredAnimals: [];
+  filteredAnimalsCount: number;
 }) {
   function clearFilters() {
     setSearch("");
@@ -36,7 +36,7 @@ export default function AnimalFilter({
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row justify-center items-center gap-5 min-h-[200px]">
+      <div className="flex flex-row justify-center items-center gap-5 min-h-50">
         <TypeFilter
           options={animalTypes}
           value={selectedType}
@@ -58,7 +58,7 @@ export default function AnimalFilter({
         </Button>
       </div>
       <div className="flex flex-row justify-between">
-        <div>Nombre animaux trouvés: {filteredAnimals.length}</div>
+        <div>Nombre animaux trouvés: {filteredAnimalsCount}</div>
         <div>
           <Button
             variant="accent"
