@@ -37,14 +37,14 @@ export default function AnimalFilter({
   const animalTypes = Array.from(new Set(animals.map((animal) => animal.type)));
 
   return (
-    <div className="flex flex-col justify-center min-h-28 w-[600px]">
-      <div className="flex flex-row items-center justify-center gap-5">
+    <div className="flex flex-col justify-around min-h-28 w-[800px]">
+      <div className="flex flex-row items-center justify-between gap-5">
         <TypeFilter
           options={animalTypes}
           value={selectedType}
           onChange={setSelectedType}
         />
-        <div>
+        <div className="w-full">
           {/* Search Input */}
           <h2>Localisation</h2>
           <input
@@ -52,12 +52,16 @@ export default function AnimalFilter({
             placeholder="Votre Ville"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full"
+            className="w-full border border-neutral-300 rounded rounded-md mt-1 p-0.5"
           />
         </div>
         <Button className="gap-2 hover:cursor-pointer" onClick={handleSearch}>
           Rencontrer
-          <img src="src/pictures/loupe.png" className="max-h-5" />
+          <img
+            src="src/pictures/loupe.png"
+            alt="magnifying glass"
+            className="max-h-5"
+          />
         </Button>
       </div>
       {showOptions && (
