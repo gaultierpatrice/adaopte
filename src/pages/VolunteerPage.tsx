@@ -38,8 +38,10 @@ function VolunteerPage() {
         subtitle="Offrez votre temps, changerez des vies. Chez adaopte,chaque bénévole à redonner espoir aux animaux en attente d'un foyer."
       />
       <div className=" flex flex-col w-full bg-white shadow-xl  p-12 max-w-4xl rounded-xl absolute top-80 left-1/2  -translate-x-1/2 ">
-        <div className="flex justyfy-center items-center flex-col mb-8">
-          <h1 className="text-7xl mb-5 p-5">Formulaire d'inscription</h1>
+        <div className="flex justify-center items-center flex-col mb-8">
+          <h1 className="text-7xl mb-5 p-5 font-bold ">
+            Formulaire d'inscription
+          </h1>
           <h2 className="text-center">
             Remplissez ce formulaire pour rejoindre notre reseau de benevoles.
             Nous vous contacterons rapidement pour vous présenter les prochaines
@@ -50,75 +52,107 @@ function VolunteerPage() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="mt-4 required-label">Prénom</label>
+              <label htmlFor="prenom" className="mt-4 required-label">
+                Prénom
+              </label>
               <input
+                id="prenom"
+                autoComplete="given-name"
                 type="text"
                 name="prenom"
                 placeholder="Votre prénom"
-                className="w-full p-2 my-2 border rounded-xl"
-                value={nom}
-                onChange={(e) => setNom(e.target.value)}
+                className="w-full p-2 my-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                value={prenom}
+                onChange={(e) => setPrenom(e.target.value)}
+                required
               />
             </div>
 
             <div>
-              <label className="mt-4 required-label">Nom</label>
+              <label htmlFor="nom" className="mt-4 required-label">
+                Nom
+              </label>
               <input
+                id="nom"
+                autoComplete="family-name"
                 type="text"
                 name="nom"
                 placeholder="Votre nom"
-                className="w-full p-2 my-2 border rounded-xl"
-                value={prenom}
-                onChange={(e) => setPrenom(e.target.value)}
+                className="w-full p-2 my-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                value={nom}
+                onChange={(e) => setNom(e.target.value)}
+                required
               />
             </div>
           </div>
 
           <div>
-            <label className="mt-4 required-label">Adresse email</label>
+            <label htmlFor="email" className="mt-4 required-label">
+              Adresse email
+            </label>
             <input
+              id="email"
+              autoComplete="email"
               type="email"
               name="email"
               placeholder="Votre email"
-              className="w-full p-2 my-2 border rounded-xl"
+              className="w-full p-2 my-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={mail}
               onChange={(e) => setMail(e.target.value)}
+              required
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="mt-4 required-label">Ville</label>
+              <label htmlFor="ville" className="mt-4 required-label">
+                Ville
+              </label>
               <input
+                id="ville"
                 type="text"
+                autoComplete="address-level2"
                 name="ville"
                 placeholder="Votre ville"
-                className="w-full p-2 my-2 border rounded-xl"
+                className="w-full p-2 my-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
                 value={ville}
                 onChange={(e) => setVille(e.target.value)}
+                required
               />
             </div>
 
             <div>
-              <label className="mt-4 required-label">Code postal</label>
+              <label htmlFor="codePostal" className="mt-4 required-label">
+                Code postal
+              </label>
               <input
+                id="codePostal"
+                autoComplete="postal-code"
+                inputMode="numeric"
+                pattern="[0-9]{5}"
+                maxLength={5}
                 type="text"
                 name="codePostal"
                 placeholder="Code postal"
-                className="w-full p-2 my-2 border rounded-xl"
+                className="w-full p-2 my-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
                 value={codePostal}
                 onChange={(e) => setCodePostal(e.target.value)}
+                required
               />
             </div>
           </div>
 
           <div>
-            <label className="mt-4 required-label">Disponibilités</label>
+            <label htmlFor="disponibilite" className="mt-4 required-label">
+              Disponibilités
+            </label>
             <select
+              id="disponibilite"
               name="disponibilite"
-              className="w-full p-2 my-2 border rounded-xl"
+              className="w-full p-2 my-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={dispo}
               onChange={(e) => setDisponibilite(e.target.value)}
+              required
             >
               <option value="" disabled>
                 Sélectionnez votre disponibilité
@@ -133,13 +167,19 @@ function VolunteerPage() {
           </div>
 
           <div>
-            <label className="mt-4 required-label">Votre motivation</label>
+            <label htmlFor="motivation" className="mt-4 required-label">
+              Votre motivation
+            </label>
             <textarea
+              id="motivation"
+              autoComplete="off"
+              rows={5}
               name="motivation"
               placeholder="Parlez-nous de votre motivation à devenir bénévole chez Adaopte"
-              className="w-full p-6 my-2 border rounded-xl"
+              className="w-full p-6 my-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={motivation}
               onChange={(e) => setMotivation(e.target.value)}
+              required
             />
           </div>
 
@@ -161,7 +201,9 @@ function VolunteerPage() {
 
       <div className="flex flex-col justify-center items-center p-115 w-full  bg-gray-100"></div>
       <div className="flex flex-col justify-center items-center p-15 w-full  bg-white">
-        <h1 className="text-5xl font-bold">Pourquoi devenir bénévole ?</h1>
+        <h1 className="text-5xl pt-1 pb-10 font-bold">
+          Pourquoi devenir bénévole ?
+        </h1>
         <p className="text-sm text-center text-gray-600 px-50">
           Être bénévole chez Adaopte, c'est bien plus qu'un coup de main : c'est
           un engagement du coeur, <br /> qui change des vies - humaines et
@@ -181,11 +223,11 @@ function VolunteerPage() {
         ))}
       </div>
 
-      <div className="grid grid-row-2 gap-7 bg-gray-100 w-full h-full p-9 mx-10">
-        <h1 className=" grid justify-center text-5xl font-bold p-6">
+      <div className="flex flex-col items-center justify-around bg-gray-100 gap-4 min-h-75 w-full">
+        <h1 className=" flex justify-center pt-15 text-5xl font-bold ">
           Témoignage de bénévoles
         </h1>
-        <p className="text-sm text-center text-gray-600 ">
+        <p className="text-sm  place-items-center text-center pb-7">
           Découvrez ce que nos bénévoles partagent de leur éxperience avec
           Adaopte
         </p>
@@ -194,7 +236,7 @@ function VolunteerPage() {
           <div className="flex flex-row items-center gap-4 ">
             <img
               src={Claire}
-              alt="benevole"
+              alt="Portrait de Claire, bénévole"
               className="w-14 h-14 rounded-full object-cover"
             />
 
@@ -216,7 +258,7 @@ function VolunteerPage() {
           <div className="flex flex-row items-center gap-4 ">
             <img
               src={Juan}
-              alt="benevole"
+              alt="Portrait de Juan, bénévole "
               className="w-14 h-14 rounded-full object-cover"
             />
 
@@ -236,7 +278,7 @@ function VolunteerPage() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-around bg-gray-100 min-h-75 w-full">
-        <h1 className="text-5xl font-bold">des questions ?</h1>
+        <h1 className="text-5xl font-bold pt-10">des questions ?</h1>
         <p className="text-sm text-center">
           Nous sommes là pour repondre à toutes vos interrogations concernant le
           bénévolat chez Adaopte.
