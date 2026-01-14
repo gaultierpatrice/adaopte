@@ -33,17 +33,18 @@ function LandingPage() {
           title="Donnons-leur autant qu'ils nous apportent"
           subtitle="Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal parmi nos animaux disponibles à l'adoption"
         />
-        <div className="flex flex-row">
+        <div className="flex flex-row absolute bg-(--primary-color) px-5 top-80 rounded-lg">
           <AnimalFilter
             search={search}
             setSearch={setSearch}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
             filteredAnimalsCount={filteredAnimals.length}
+            showOptions={false}
           />
         </div>
 
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full mt-10">
           <section className="flex flex-col justify-center items-center bg-gray-100">
             <h1 className="flex flex-col justify-center items-center text-3xl font-bold mt-5">
               Nos animaux à adopter

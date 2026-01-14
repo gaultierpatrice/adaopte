@@ -9,12 +9,14 @@ export default function AnimalFilter({
   selectedType,
   setSelectedType,
   filteredAnimalsCount,
+  showOptions = true,
 }: {
   search: string;
   setSearch: (value: string) => void;
   selectedType: string;
   setSelectedType: (value: string) => void;
   filteredAnimalsCount: number;
+  showOptions: boolean;
 }) {
   function clearFilters() {
     setSearch("");
@@ -35,8 +37,8 @@ export default function AnimalFilter({
   const animalTypes = Array.from(new Set(animals.map((animal) => animal.type)));
 
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row justify-center items-center gap-5 min-h-50">
+    <div className="flex flex-col justify-center min-h-28">
+      <div className="flex flex-row items-center justify-center gap-2">
         <TypeFilter
           options={animalTypes}
           value={selectedType}
@@ -57,18 +59,20 @@ export default function AnimalFilter({
           <img src="src/pictures/loupe.png" className="max-h-5" />
         </Button>
       </div>
-      <div className="flex flex-row justify-between">
-        <div>Nombre animaux trouvés: {filteredAnimalsCount}</div>
-        <div>
-          <Button
-            variant="accent"
-            onClick={clearFilters}
-            className="hover:cursor-pointer"
-          >
-            réinitialiser les filtres
-          </Button>
+      {showOptions && (
+        <div className="flex flex-row justify-between">
+          <div>Nombre animaux trouvés: {filteredAnimalsCount}</div>
+          <div>
+            <Button
+              variant="accent"
+              onClick={clearFilters}
+              className="hover:cursor-pointer"
+            >
+              réinitialiser les filtres
+            </Button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
