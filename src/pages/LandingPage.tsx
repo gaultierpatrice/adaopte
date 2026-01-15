@@ -30,7 +30,7 @@ function LandingPage({
     <>
       <main className="flex flex-col items-center">
         <ImageWithText
-          src="src/pictures/background.jpg"
+          src="/pictures/background.jpg"
           alt="chien sur la plage"
           title="Donnons-leur autant qu'ils nous apportent"
           subtitle="Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal parmi nos animaux disponibles à l'adoption"

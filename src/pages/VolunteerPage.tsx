@@ -3,8 +3,8 @@ import volunteerData from "../data/volunteer.json";
 import Card from "../components/Card";
 import Button from "../components/Button.tsx";
 import { useState } from "react";
-import Claire from "../pictures/omid-armin-yisZonvqh54-unsplash.jpg";
-import Juan from "../pictures/christian-buehner-DItYlc26zVI-unsplash.jpg";
+import Claire from "/pictures/omid-armin-yisZonvqh54-unsplash.jpg";
+import Juan from "/pictures/christian-buehner-DItYlc26zVI-unsplash.jpg";
 
 function VolunteerPage() {
   const [nom, setNom] = useState("");
@@ -32,7 +32,7 @@ function VolunteerPage() {
   return (
     <main className="flex flex-col items-center ">
       <ImageWithText
-        src="src/pictures/alin-luna-8LfPXM6abRk-unsplash.jpg"
+        src="/pictures/alin-luna-8LfPXM6abRk-unsplash.jpg"
         alt="chien dans une cage"
         title="Devenir bénévole"
         subtitle="Offrez votre temps, changerez des vies. Chez adaopte,chaque bénévole à redonner espoir aux animaux en attente d'un foyer."
