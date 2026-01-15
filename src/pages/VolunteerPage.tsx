@@ -3,8 +3,8 @@ import volunteerData from "../data/volunteer.json";
 import Card from "../components/Card";
 import Button from "../components/Button.tsx";
 import { useState } from "react";
-import Claire from "../pictures/omid-armin-yisZonvqh54-unsplash.jpg";
-import Juan from "../pictures/christian-buehner-DItYlc26zVI-unsplash.jpg";
+import Claire from "/pictures/omid-armin-yisZonvqh54-unsplash.jpg";
+import Juan from "/pictures/christian-buehner-DItYlc26zVI-unsplash.jpg";
 
 function VolunteerPage() {
   const [nom, setNom] = useState("");
