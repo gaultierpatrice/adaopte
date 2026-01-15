@@ -57,7 +57,7 @@ export default function AnimalFilter({
         </div>
         <Button className="gap-2 hover:cursor-pointer" onClick={handleSearch}>
           Rencontrer
-          <img src="src/pictures/loupe.png" className="max-h-5" />
+          <img src="/pictures/loupe.png" className="max-h-5" />
         </Button>
       </div>
       {showOptions && (
