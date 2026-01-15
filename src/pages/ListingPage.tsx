@@ -4,20 +4,14 @@ import AnimalFilter from "../components/AnimalFilter";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import usePagination from "../hooks/usePagination.tsx";
-
-interface ListingPageProps {
-  search: string;
-  setSearch: (value: string) => void;
-  selectedType: string;
-  setSelectedType: (value: string) => void;
-}
+import type SearchProps from "../types/types.ts";
 
 function ListingPage({
   search,
   setSearch,
   selectedType,
   setSelectedType,
-}: ListingPageProps) {
+}: SearchProps) {
   const [searchParams] = useSearchParams();
 
   const cityFromUrl = searchParams.get("city") ?? "";

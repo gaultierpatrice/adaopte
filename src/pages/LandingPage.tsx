@@ -8,20 +8,14 @@ import information from "../data/information.json";
 import AnimalFilter from "../components/AnimalFilter.tsx";
 import usePagination from "../hooks/usePagination.tsx";
 import AnimalImage from "../components/AnimalImage.tsx";
-
-interface LandingPageProps {
-  search: string;
-  setSearch: (value: string) => void;
-  selectedType: string;
-  setSelectedType: (value: string) => void;
-}
+import type SearchProps from "../types/types.ts";
 
 function LandingPage({
   search,
   setSearch,
   selectedType,
   setSelectedType,
-}: LandingPageProps) {
+}: SearchProps) {
   const filteredAnimals = animals.filter((animal) => {
     const matchesCity = animal.city
       .toLowerCase()
