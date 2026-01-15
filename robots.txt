@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Prevent crawling of common build/dev folders
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /private/
+
+# Sitemap (replace with your production URL)
+Sitemap: https://example.com/sitemap.xml
+Host: https://example.com

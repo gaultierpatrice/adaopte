@@ -6,14 +6,16 @@ import { LuHandHeart } from "react-icons/lu";
 import animals from "../data/data.json";
 import information from "../data/information.json";
 import AnimalFilter from "../components/AnimalFilter.tsx";
-import { useState } from "react";
 import usePagination from "../hooks/usePagination.tsx";
 import AnimalImage from "../components/AnimalImage.tsx";
+import type SearchProps from "../types/types.ts";
 
-function LandingPage() {
-  const [search, setSearch] = useState("");
-  const [selectedType, setSelectedType] = useState("");
-
+function LandingPage({
+  search,
+  setSearch,
+  selectedType,
+  setSelectedType,
+}: SearchProps) {
   const filteredAnimals = animals.filter((animal) => {
     const matchesCity = animal.city
       .toLowerCase()
