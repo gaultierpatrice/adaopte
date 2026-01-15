@@ -37,6 +37,7 @@ function App() {
           }
         />
         <Route path="/devenir-benevole" element={<DevenirBenevole />} />
+        <Route path="*" element={<div>Page introuvable</div>} />
       </Routes>
 
       <Footer />
