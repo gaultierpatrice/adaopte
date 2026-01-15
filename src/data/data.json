@@ -7,7 +7,7 @@
     "city": "Lille",
     "zipcode": "59000",
     "description": "Charlie est un petit chien calme et affectueux qui adore les balades tranquilles et les caresses sur le canapé.",
-    "imageUrl": "src/pictures/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg"
+    "imageUrl": "/pictures/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg"
   },
   {
     "name": "Mia",
@@ -17,7 +17,7 @@
     "city": "Strasbourg",
     "zipcode": "67000",
     "description": "Mia est une boule de tendresse curieuse et joueuse, toujours prête à ronronner près de vous.",
-    "imageUrl": "src/pictures/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg"
+    "imageUrl": "/pictures/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg"
   },
   {
     "name": "Coco",
@@ -27,7 +27,7 @@
     "city": "Annecy",
     "zipcode": "74000",
     "description": "Coco est un petit lapin plein d’énergie, très doux et parfait pour un foyer aimant et paisible.",
-    "imageUrl": "src/pictures/chan-swan-NKyl19P5IHg-unsplash.jpg"
+    "imageUrl": "/pictures/chan-swan-NKyl19P5IHg-unsplash.jpg"
   },
   {
     "name": "Rex",
@@ -37,7 +37,7 @@
     "city": "Grenoble",
     "zipcode": "38000",
     "description": "Rex est un chien loyal et majestueux, idéal pour une personne douce et patiente qui aime les câlins silencieux.",
-    "imageUrl": "src/pictures/alan-king-KZv7w34tluA-unsplash.jpg"
+    "imageUrl": "/pictures/alan-king-KZv7w34tluA-unsplash.jpg"
   },
   {
     "name": "Luna",
@@ -47,7 +47,7 @@
     "city": "Bordeaux",
     "zipcode": "33000",
     "description": "Luna adore les coins ensoleillés et les siestes à vos côtés. Elle vous offrira tout l’amour d’un regard félin.",
-    "imageUrl": "src/pictures/jae-park-7GX5aICb5i4-unsplash.jpg"
+    "imageUrl": "/pictures/jae-park-7GX5aICb5i4-unsplash.jpg"
   },
   {
     "name": "Biscuit",
@@ -57,7 +57,7 @@
     "city": "Tours",
     "zipcode": "37000",
     "description": "Biscuit est tout petit mais plein de vie ! Il aime les légumes croquants et les instants de douceur en famille.",
-    "imageUrl": "src/pictures/yosei-g-OVgE3m4MHKM-unsplash.jpg"
+    "imageUrl": "/pictures/yosei-g-OVgE3m4MHKM-unsplash.jpg"
   },
   {
     "name": "Rio",
@@ -67,7 +67,7 @@
     "city": "Poitiers",
     "zipcode": "86000",
     "description": "Rio est discret, mignon comme tout, et adore explorer les petits coins de la maison avec délicatesse.",
-    "imageUrl": "src/pictures/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg"
+    "imageUrl": "/pictures/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg"
   },
   {
     "name": "Ruby",
@@ -77,7 +77,7 @@
     "city": "Chamonix",
     "zipcode": "74400",
     "description": "Ruby est une boule de neige pleine d’amour ! Elle adore les promenades et les câlins par temps frais.",
-    "imageUrl": "src/pictures/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg"
+    "imageUrl": "/pictures/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg"
   },
   {
     "name": "Oscar",
@@ -87,7 +87,7 @@
     "city": "Nantes",
     "zipcode": "44000",
     "description": "Oscar est un chien sociable et équilibré, toujours heureux de partager des moments avec sa famille.",
-    "imageUrl": "src/pictures/oscar.jpg"
+    "imageUrl": "/pictures/oscar.jpg"
   },
   {
     "name": "Plume",
@@ -97,7 +97,7 @@
     "city": "Rennes",
     "zipcode": "35000",
     "description": "Plume est douce et discrète, appréciant autant la tranquillité que les jeux légers.",
-    "imageUrl": "src/pictures/plume.jpg"
+    "imageUrl": "/pictures/plume.jpg"
   },
   {
     "name": "Volt",
@@ -107,7 +107,7 @@
     "city": "Clermont-Ferrand",
     "zipcode": "63000",
     "description": "Volt est intelligent et dynamique, parfait pour une personne active aimant les longues sorties.",
-    "imageUrl": "src/pictures/volt.jpg"
+    "imageUrl": "/pictures/volt.jpg"
   },
   {
     "name": "Noisette",
@@ -117,7 +117,7 @@
     "city": "Dijon",
     "zipcode": "21000",
     "description": "Noisette est calme et attachante, idéale pour un environnement paisible.",
-    "imageUrl": "src/pictures/noisette.jpg"
+    "imageUrl": "/pictures/noisette.jpg"
   },
   {
     "name": "Simba",
@@ -127,7 +127,7 @@
     "city": "Montpellier",
     "zipcode": "34000",
     "description": "Simba est élégant et curieux, toujours attentif à ce qui l’entoure.",
-    "imageUrl": "src/pictures/simba.jpg"
+    "imageUrl": "/pictures/simba.jpg"
   },
   {
     "name": "Snow",
@@ -137,7 +137,7 @@
     "city": "Besançon",
     "zipcode": "25000",
     "description": "Snow est très doux et apprécie les moments de calme en compagnie des humains.",
-    "imageUrl": "src/pictures/snow.jpg"
+    "imageUrl": "/pictures/snow.jpg"
   },
   {
     "name": "Jazz",
@@ -147,7 +147,7 @@
     "city": "Paris",
     "zipcode": "75011",
     "description": "Jazz est posé et affectueux, parfait pour la vie en appartement.",
-    "imageUrl": "src/pictures/jazz.jpg"
+    "imageUrl": "/pictures/jazz.jpg"
   },
   {
     "name": "Nina",
@@ -157,7 +157,7 @@
     "city": "Orléans",
     "zipcode": "45000",
     "description": "Nina est joueuse et sociable, aimant observer son environnement depuis les hauteurs.",
-    "imageUrl": "src/pictures/nina.jpg"
+    "imageUrl": "/pictures/nina.jpg"
   },
   {
     "name": "Max",
@@ -167,7 +167,7 @@
     "city": "La Rochelle",
     "zipcode": "17000",
     "description": "Max est un chien gentil et fiable, très apprécié des enfants.",
-    "imageUrl": "src/pictures/max.jpg"
+    "imageUrl": "/pictures/max.jpg"
   },
   {
     "name": "Kiwi",
@@ -177,7 +177,7 @@
     "city": "Toulon",
     "zipcode": "83000",
     "description": "Kiwi est curieux et expressif, aimant interagir avec son entourage.",
-    "imageUrl": "src/pictures/kiwi.jpg"
+    "imageUrl": "/pictures/kiwi.jpg"
   },
 
   {
@@ -188,7 +188,7 @@
     "city": "Avignon",
     "zipcode": "84000",
     "description": "Pablo est vif et affectueux, très attaché à ses humains.",
-    "imageUrl": "src/pictures/pablo.jpg"
+    "imageUrl": "/pictures/pablo.jpg"
   },
   {
     "name": "Lily",
@@ -198,7 +198,7 @@
     "city": "Ajaccio",
     "zipcode": "20000",
     "description": "Lily est délicate et calme, appréciant les environnements doux.",
-    "imageUrl": "src/pictures/lily.jpg"
+    "imageUrl": "/pictures/lily.jpg"
   },
   {
     "name": "Moka",
@@ -208,7 +208,7 @@
     "city": "Colmar",
     "zipcode": "68000",
     "description": "Moka est curieux et sociable, aimant explorer calmement.",
-    "imageUrl": "src/pictures/moka.jpg"
+    "imageUrl": "/pictures/moka.jpg"
   },
   {
     "name": "Thor",
@@ -218,7 +218,7 @@
     "city": "Gap",
     "zipcode": "05000",
     "description": "Thor est énergique et indépendant, parfait pour les grands espaces.",
-    "imageUrl": "src/pictures/thor.jpg"
+    "imageUrl": "/pictures/thor.jpg"
   },
   {
     "name": "Olive",
@@ -228,7 +228,7 @@
     "city": "Aix-en-Provence",
     "zipcode": "13100",
     "description": "Olive est curieuse et affectueuse, toujours proche de ses humains.",
-    "imageUrl": "src/pictures/olive.jpg"
+    "imageUrl": "/pictures/olive.jpg"
   },
   {
     "name": "Peanut",
@@ -238,7 +238,7 @@
     "city": "Le Mans",
     "zipcode": "72000",
     "description": "Peanut est discrète et active, idéale pour un foyer calme.",
-    "imageUrl": "src/pictures/peanut.jpg"
+    "imageUrl": "/pictures/peanut.jpg"
   },
   {
     "name": "Rocky",
@@ -248,7 +248,7 @@
     "city": "Reims",
     "zipcode": "51100",
     "description": "Rocky est joueur et loyal, très proche de sa famille.",
-    "imageUrl": "src/pictures/rocky.jpg"
+    "imageUrl": "/pictures/rocky.jpg"
   },
   {
     "name": "Saphir",
@@ -258,7 +258,7 @@
     "city": "Nancy",
     "zipcode": "54000",
     "description": "Saphir est élégant et calme, appréciant les ambiances sereines.",
-    "imageUrl": "src/pictures/saphir.jpg"
+    "imageUrl": "/pictures/saphir.jpg"
   },
   {
     "name": "Caramel",
@@ -268,7 +268,7 @@
     "city": "Albi",
     "zipcode": "81000",
     "description": "Caramel est sociable et gourmand, adorant les légumes frais.",
-    "imageUrl": "src/pictures/caramel.jpg"
+    "imageUrl": "/pictures/caramel.jpg"
   },
   {
     "name": "Happy",
@@ -278,7 +278,7 @@
     "city": "Chartres",
     "zipcode": "28000",
     "description": "Happy est doux et très affectueux, parfait compagnon de vie.",
-    "imageUrl": "src/pictures/happy.jpg"
+    "imageUrl": "/pictures/happy.jpg"
   },
   {
     "name": "Zelda",
@@ -288,7 +288,7 @@
     "city": "Vannes",
     "zipcode": "56000",
     "description": "Zelda est vive et expressive, avec un fort caractère attachant.",
-    "imageUrl": "src/pictures/zelda.jpg"
+    "imageUrl": "/pictures/zelda.jpg"
   },
   {
     "name": "Flocon",
@@ -298,6 +298,6 @@
     "city": "Épinal",
     "zipcode": "88000",
     "description": "Flocon est paisible et très doux, idéal pour un foyer tranquille.",
-    "imageUrl": "src/pictures/flocon.jpg"
+    "imageUrl": "/pictures/flocon.jpg"
   }
 ]

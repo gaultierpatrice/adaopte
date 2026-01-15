@@ -32,7 +32,7 @@ function VolunteerPage() {
   return (
     <main className="flex flex-col items-center ">
       <ImageWithText
-        src="src/pictures/alin-luna-8LfPXM6abRk-unsplash.jpg"
+        src="/pictures/alin-luna-8LfPXM6abRk-unsplash.jpg"
         alt="chien dans une cage"
         title="Devenir bénévole"
         subtitle="Offrez votre temps, changerez des vies. Chez adaopte,chaque bénévole à redonner espoir aux animaux en attente d'un foyer."
