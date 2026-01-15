@@ -58,7 +58,7 @@ export default function AnimalFilter({
         <Button className="gap-2 hover:cursor-pointer" onClick={handleSearch}>
           Rencontrer
           <img
-            src="src/pictures/loupe.png"
+            src="/pictures/loupe.png"
             alt="magnifying glass"
             className="max-h-5"
           />
