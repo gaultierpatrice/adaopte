@@ -1,18 +1,27 @@
 import Card from "../components/Card";
 import animals from "../data/data.json";
 import AnimalFilter from "../components/AnimalFilter";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import usePagination from "../hooks/usePagination.tsx";
 
-function ListingPage() {
+interface ListingPageProps {
+  search: string;
+  setSearch: (value: string) => void;
+  selectedType: string;
+  setSelectedType: (value: string) => void;
+}
+
+function ListingPage({
+  search,
+  setSearch,
+  selectedType,
+  setSelectedType,
+}: ListingPageProps) {
   const [searchParams] = useSearchParams();
 
   const cityFromUrl = searchParams.get("city") ?? "";
   const typeFromUrl = searchParams.get("type") ?? "";
-
-  const [search, setSearch] = useState(cityFromUrl);
-  const [selectedType, setSelectedType] = useState(typeFromUrl);
 
   const filteredAnimals = animals.filter(
     (animal) =>
