@@ -11,7 +11,7 @@ import {
 
 function NavBar() {
   return (
-    <header className="flex flex-row justify-between p-5 bg-(--primary-color)">
+    <header className="flex flex-col md:flex-row justify-between p-5 bg-(--primary-color)">
       <h2 className="flex items-center font-bold gap-2">
         <span>
           <LuPawPrint />

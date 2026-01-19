@@ -39,7 +39,7 @@ function VolunteerPage() {
       />
       <div className=" flex flex-col w-full bg-white shadow-xl  p-12 max-w-4xl rounded-xl absolute top-80 left-1/2  -translate-x-1/2 ">
         <div className="flex justify-center items-center flex-col mb-8">
-          <h1 className="text-7xl mb-5 p-5 font-bold ">
+          <h1 className="text-center text-5xl md:text-7xl mb-5 p-5 font-bold ">
             Formulaire d'inscription
           </h1>
           <h2 className="text-center">
@@ -201,16 +201,16 @@ function VolunteerPage() {
 
       <div className="flex flex-col justify-center items-center p-115 w-full  bg-gray-100"></div>
       <div className="flex flex-col justify-center items-center p-15 w-full  bg-white">
-        <h1 className="text-5xl pt-1 pb-10 font-bold">
+        <h1 className="text-center text-5xl pt-17 md:text-5xl pt-1 pb-10 font-bold">
           Pourquoi devenir bénévole ?
         </h1>
-        <p className="text-sm text-center text-gray-600 px-50">
+        <p className=" md:text-sm text-center text-gray-600">
           Être bénévole chez Adaopte, c'est bien plus qu'un coup de main : c'est
           un engagement du coeur, <br /> qui change des vies - humaines et
           animales.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-7 p-9 mx-10">
+      <div className="grid grid-rows-4 gap-10 md:grid-cols-4 md:gap-7 p-9 mx-10">
         {volunteerData.map((volunteerData, index) => (
           <Card
             key={index}
@@ -279,13 +279,13 @@ function VolunteerPage() {
       </div>
       <div className="flex flex-col items-center justify-around bg-gray-100 min-h-75 w-full">
         <h1 className="text-5xl font-bold pt-10">des questions ?</h1>
-        <p className="text-sm text-center">
+        <p className="p-5 md:text-sm text-center">
           Nous sommes là pour repondre à toutes vos interrogations concernant le
           bénévolat chez Adaopte.
           <br />
           N'hésitez pas à nous contacter pour en savoir plus sur notre démarche.
         </p>
-        <div className="flex flex-row justify-center gap-5 p-4 px-20">
+        <div className="flex flex-col  md:flex-row justify-center gap-5 p-4 px-20 ">
           <Button className="hover:cursor-pointer">Foire aux questions</Button>
 
           <Button className="gap-2 " variant="secondary">
