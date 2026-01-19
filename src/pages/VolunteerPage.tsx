@@ -30,7 +30,7 @@ function VolunteerPage() {
   };
 
   return (
-    <main className="flex flex-col items-center ">
+    <main className="flex flex-col items-center overflow-x-hidden md:overflow-x-visible">
       <ImageWithText
         src="/pictures/alin-luna-8LfPXM6abRk-unsplash.jpg"
         alt="chien dans une cage"
