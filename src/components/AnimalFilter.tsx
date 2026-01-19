@@ -61,7 +61,7 @@ export default function AnimalFilter({
         </Button>
       </div>
       {showOptions && (
-        <div className="flex flex-row justify-between mt-5">
+        <div className="flex flex-col md:flex-row justify-between mt-5">
           <div>Nombre animaux trouvés: {filteredAnimalsCount}</div>
           <div>
             <Button

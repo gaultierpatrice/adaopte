@@ -39,8 +39,8 @@ function Card({
     imageSize === "small"
       ? "w-full h-11 object-contain"
       : imageSize === "grid"
-      ? "w-full h-full object-cover"
-      : "w-full h-56 object-cover";
+        ? "w-full h-full object-cover"
+        : "w-full h-56 object-cover";
 
   function meetAnimal() {
     console.log(`Nom de l'animal: ${name}, Type: ${type}`);
@@ -104,7 +104,11 @@ function Card({
       )}
 
       {showButton && (
-        <Button size="sm" className="w-fit mt-5 ml-5 mb-5" onClick={meetAnimal}>
+        <Button
+          size="sm"
+          className="size-<1/3> mt-5 ml-5 mb-5"
+          onClick={meetAnimal}
+        >
           Rencontrer
         </Button>
       )}

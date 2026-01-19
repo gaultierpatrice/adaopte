@@ -51,7 +51,7 @@ function LandingPage({
             <h1 className="flex flex-col justify-center items-center text-3xl font-bold mt-5">
               Nos animaux à adopter
             </h1>
-            <p className="justify-center items-center text-sm">
+            <p className="justify-center items-center text-sm px-2">
               Découvrez en image tous nos animaux qui attendent une famille
               aimante. Chaque photo raconte une histoire et un espoir.
             </p>
@@ -101,7 +101,7 @@ function LandingPage({
           </div>
           <div className="flex flex-col items-center justify-around bg-gray-100 min-h-75 w-full">
             <h1 className="text-5xl mt-5">Prêt.e à changer une vie ?</h1>
-            <p className="text-sm px-50">
+            <p className="text-sm px-5 md:px-50">
               Adoptez, partagez, soutenez... Chaque geste compte. Que vous
               ouvriez votre foyer ou votre coeur, vous pouvez offrir une seconde
               chance à un animal abandonné.

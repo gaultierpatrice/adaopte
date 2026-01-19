@@ -20,7 +20,7 @@ function ListingPage({
   const filteredAnimals = animals.filter(
     (animal) =>
       (!search || animal.city.toLowerCase().includes(search.toLowerCase())) &&
-      (!selectedType || animal.type === selectedType)
+      (!selectedType || animal.type === selectedType),
   );
 
   const {
@@ -49,7 +49,7 @@ function ListingPage({
       </div>
 
       <main className="min-h-162.5 flex flex-col items-center justify-center">
-        <div className="grid grid-cols-4 gap-6 p-15">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-15">
           {animalsToDisplay.map((animal, index) => (
             <Card key={index} {...animal} imageUrl={animal.imageUrl} />
           ))}
