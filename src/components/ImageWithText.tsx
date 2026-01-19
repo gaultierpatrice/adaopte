@@ -19,7 +19,7 @@ export default function ImageWithText({
         className="w-full max-h-80 object-cover brightness-50"
       />
 
-      <div className="absolute inset-0 flex flex-col max-h-150 justify-center items-center text-center">
+      <div className="absolute inset-0 flex flex-col max-h-90 justify-center items-center text-center mt-40 md:mt-1 md:max-h-150">
         <h1 className="text-white font-(--font-family-heading) text-5xl">
           {title}
         </h1>
