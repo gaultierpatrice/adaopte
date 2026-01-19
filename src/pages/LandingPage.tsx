@@ -35,7 +35,7 @@ function LandingPage({
           title="Donnons-leur autant qu'ils nous apportent"
           subtitle="Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal parmi nos animaux disponibles à l'adoption"
         />
-        <div className="flex flex-row absolute bg-(--primary-color) px-5 top-80 rounded-lg">
+        <div className="flex flex-row md:absolute bg-(--primary-color) px-5 top-80 rounded-lg">
           <AnimalFilter
             search={search}
             setSearch={setSearch}
@@ -65,7 +65,10 @@ function LandingPage({
 
                 return (
                   <div key={animal.name} className={`${rowSpanClass} h-full`}>
-                    <AnimalImage src={animal.imageUrl} alt={animal.name} />
+                    <AnimalImage
+                      src={animal.imageUrl}
+                      alt={(animal.name, animal.breed)}
+                    />
                   </div>
                 );
               })}
@@ -79,13 +82,13 @@ function LandingPage({
           <h1 className="flex flex-col justify-center  p-10 text-4xl font-bold">
             Comment ça marche
           </h1>
-          <p className="text-sm flex px-50 text-gray-600 justify-center text-center pb-8">
+          <p className="text-sm flex px-10 md:px-50 text-gray-600 justify-center text-center pb-8">
             adopter un animal est un engagement serieux et à long terme. Voici
             notre processus d'adoption en
             <br /> quelques étapes simples.
           </p>
 
-          <div className="grid grid-cols-4 gap-6 p-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8">
             {information.map((information, index) => (
               <Card
                 key={index}
@@ -103,7 +106,7 @@ function LandingPage({
               ouvriez votre foyer ou votre coeur, vous pouvez offrir une seconde
               chance à un animal abandonné.
             </p>
-            <div className="flex flex-row justify-center gap-5 px-20">
+            <div className="flex flex-col md:flex-row justify-center gap-2 p-5 md:p-20 ">
               <NavLink to="/listing">
                 <Button className="hover:cursor-pointer">
                   Adopter un animal

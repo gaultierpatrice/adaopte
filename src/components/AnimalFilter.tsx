@@ -22,23 +22,19 @@ export default function AnimalFilter({
     setSearch("");
     setSelectedType("");
   }
-
   const navigate = useNavigate();
-
   const handleSearch = () => {
     const params = new URLSearchParams();
-
     if (search) params.set("city", search);
     if (selectedType) params.set("type", selectedType);
-
     navigate(`/listing?${params.toString()}`);
   };
   // Extract unique animal types
   const animalTypes = Array.from(new Set(animals.map((animal) => animal.type)));
 
   return (
-    <div className="flex flex-col justify-around min-h-28 w-[800px]">
-      <div className="flex flex-row items-center justify-between gap-5">
+    <div className="flex flex-col justify-around min-h-28 size-<2/3>">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-5 p-2">
         <TypeFilter
           options={animalTypes}
           value={selectedType}
