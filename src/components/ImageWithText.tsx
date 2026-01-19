@@ -12,18 +12,18 @@ export default function ImageWithText({
   subtitle,
 }: ImageWithTextProps) {
   return (
-    <div className="relative w-full">
+    <div className="block md:relative w-full">
       <img
         src={src}
         alt={alt}
         className="w-full max-h-80 object-cover brightness-50"
       />
 
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
+      <div className="absolute inset-0 flex flex-col max-h-[600px] justify-center items-center text-center">
         <h1 className="text-white font-[var(--font-family-heading)] font-bold text-5xl">
           {title}
         </h1>
-        <p className="mt-5 text-white/90 px-60 text-sm">{subtitle}</p>
+        <p className="mt-5 text-white/90 md:px-60 text-sm">{subtitle}</p>
       </div>
     </div>
   );
