@@ -37,7 +37,7 @@ function VolunteerPage() {
         title="Devenir bénévole"
         subtitle="Offrez votre temps, changerez des vies. Chez adaopte,chaque bénévole à redonner espoir aux animaux en attente d'un foyer."
       />
-      <div className=" flex flex-col w-full bg-white shadow-xl  p-12 max-w-4xl rounded-xl absolute top-80 left-1/2  -translate-x-1/2 ">
+      <div className=" flex flex-col w-full mt-20 bg-white shadow-xl md:mt-0 p-12 max-w-4xl  rounded-xl absolute top-80 left-1/2  -translate-x-1/2 ">
         <div className="flex justify-center items-center flex-col mb-8">
           <h1 className="text-center text-5xl md:text-7xl mb-5 p-5 font-bold ">
             Formulaire d'inscription
@@ -210,7 +210,7 @@ function VolunteerPage() {
           animales.
         </p>
       </div>
-      <div className="grid grid-rows-4 gap-10 md:grid-cols-4 md:gap-7 p-9 mx-10">
+      <div className="grid gap-10 md:grid-cols-4 gap-7 p-9 mx-10">
         {volunteerData.map((volunteerData, index) => (
           <Card
             key={index}
